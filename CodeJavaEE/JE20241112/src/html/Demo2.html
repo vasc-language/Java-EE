@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+1）表单域：包含表单元素的区域，重点是form标签
+2）表单控件：输入框，提交按钮，重点是input标签
+-->
+    <form action="Test.html" method="post">
+        用户：<input type="text" name="useName"></br>
+        密码：<input type="password" name="password"></br>
+        <!-- radio表示单选框 -->
+        性别：<input type="radio" name="gender" id="g1" value="1"><label for="g1">男</label>
+             <input type="radio" name="gender" id="g2" value="2"><label for="g2">女</label>
+             <input type="radio" name="gender" id="g3" value="3"><label for="g3">保密</label></br>
+        <!-- checkbox表示复选框 -->
+        兴趣：<input type="checkbox" name="hobby" value="1"> 篮球
+             <input type="checkbox" name="hobby" value="2"> 足球
+             <input type="checkbox" name="hobby" value="3"> 排球
+             <input type="checkbox" name="hobby" value="4"> 乒乓球</br>
+
+<!--select 标签
+下拉菜单
+option中定义select="selected" 表示默认选中
+-->
+        专业：<select>
+        <option value="1">计算机科学与技术</option>
+        <option value="2">软件工程</option>
+        <option value="3">人工智能</option>
+        <option value="4" selected>物联网</option>
+    </select></br>
+
+<!--textarea 标签
+文本域中的内容,就是默认内容,注意,空格也会有影响
+rows 和 cols 也都不会直接使用,都是用CSS来改的
+-->
+        个人描述：<textarea rows="3" cols="10"></textarea></br>
+
+<!--        &lt;!&ndash; 1.button标签：没有提交的效果  &ndash;&gt;-->
+<!--        <button>我是一个按钮</button></br>-->
+<!--        &lt;!&ndash; 2. 普通按钮：有提交的效果 &ndash;&gt;-->
+<!--        <input type="button" value="按钮"></br>-->
+        <!-- 3. 提交按钮：有提交的效果 -->
+        <input type="submit" value="提交"><br>
+    </form>
+</body>
+</html>

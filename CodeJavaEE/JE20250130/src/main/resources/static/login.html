@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+</head>
+
+<body>
+  <h1>用户登录</h1>
+  用户名：<input name="userName" type="text" id="userName"><br>
+  密码：<input name="password" type="password" id="password"><br>
+  <input type="button" value="登录" onclick="login()">
+  
+  <script src="JS/jquery-3.7.1.min.js"></script>
+  <script>
+    function login() {
+        $.ajax({
+          type: "post",
+          url: "UserController2/login",
+          data: {
+            userName: $("#userName").val(),
+            password: $("#password").val()
+          },  
+          // http 请求成功
+          success: function(result){
+              if (result) {
+                // 密码正确
+                location.href = "index.html";
+                // location.assign("index.html");
+              } else {
+                // 密码错误
+                alert("密码错误，请确认");
+              } 
+          }
+        })
+    }
+
+  </script>
+</body>
+
+</html>

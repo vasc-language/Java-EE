@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JE20241031:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>JE20241031</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="JE20241031-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="JE20241031:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jsp-api" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

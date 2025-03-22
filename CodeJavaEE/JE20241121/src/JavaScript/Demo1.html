@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个JS文件</title>
+<!--  JavaScript的外部样式表示  -->
+<!--    <script src="js.js"></script>-->
+</head>
+<body>
+<!--  JavaScript的内部样式表示  -->
+    <script>
+        /*// 1. 变量 & 类型
+        let aa = 10;
+        console.log(typeof aa); // number
+        aa = "aaa";
+        console.log(typeof aa); // string
+        aa = true;
+        console.log(typeof aa); // boolean
+
+        let bb;
+        console.log(typeof bb); // undefined*/
+
+        /*// 2. 运算符
+        let aa = 10;
+        let bb = "10";
+        // == ：只比较值
+        // === ：不仅比较值，还比较类型
+        console.log("aa == bb：" + (aa == bb)); // true
+        console.log("aa === bbb：" + (aa === bb)); // false*/
+
+        /*// 3. 定义数组
+        let array1 = [];
+        let array2 = [1, "a", true];
+
+        // 取值
+        console.log(array1[0]); // undefined
+        console.log(array2[1]); // a
+
+        // 添加
+        array2[3] = "aaa";
+        console.log(array2);
+
+        // 修改
+        array2[2] = true;
+        console.log(array2);
+
+        // 删除
+        array2.splice(1, 1); // 第一个参数为删除的坐标，第二个参数为从该坐标开始要删除的个数
+        console.log(array2);
+
+        array2[-1] = "asd";
+        console.log(array2);*/
+
+        /*// 4. 函数定义
+        function sum(x, y) {
+            console.log(x + y);
+        }
+        sum(10, 20); // 30
+
+        // 使用匿名内部类来写
+        let sum1 = function (x, y) {
+            console.log(x + y);
+        }
+        sum1(100, 200); // 300*/
+
+        // 5. 对象定义
+        let student1 = {};
+        let student2 = {
+            "name": "张三",
+            "age": 19
+        }
+
+        // 读：两种形式
+        console.log(student2.name); // 张三
+        console.log(student2["name"]); // 张三
+
+        // 修改
+        student2.name = "李四";
+        console.log(student2.name);
+        console.log(student2);
+
+        // 添加
+        student1.name = "空对象赋值";
+        console.log(student1);
+
+    </script>
+</body>
+</html>

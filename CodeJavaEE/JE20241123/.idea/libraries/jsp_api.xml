@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="jsp-api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/apache-tomcat-8.5.68/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/apache-tomcat-8.5.68/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/jstl/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/jstl/standard.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../JavaEE1/apache-tomcat-8.5.68/lib" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/api/mysql-connector-j-8.0.33.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../JavaEE1/apache-tomcat-8.5.68/lib" recursive="false" />
+  </library>
+</component>

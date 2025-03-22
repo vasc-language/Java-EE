@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        /*  CSS选择器  */
+        /*!* 1. 标签选择器 *!
+        div {
+            color: blueviolet;
+        }
+        a {
+            color: blue;
+        }
+        span {
+            color: brown;
+        }*/
+
+        /*!* 2. class选择器 *!
+        .font40 {
+            color: #2b71e2;
+            font-size: 20px;
+        }*/
+
+        /* 3. id的选择器 */
+        /*#div1 {
+            color: blueviolet;
+        }
+        #div2 {
+            color: aqua;
+        }*/
+
+        /*!* 4. 通配符选择器 *!
+        * {
+            color: blue;
+        }*/
+
+        /*!* 5. 复合选择器 *!
+        #div1, #div2 {
+            color: brown;
+        }
+
+
+        /*li {
+            color: blue;
+        }
+
+        ul li {
+            color: blueviolet;
+        }
+
+        ol {
+            color: brown;
+        }*/
+
+        ol a {
+            color: aqua;
+        }
+        a {
+            color: brown;
+        }
+
+        ul .first {
+            color: blue;
+        }
+
+    /*  CSS样式  */
+        #div1 {
+            color: blue;
+            width: 100px;
+            height: 20px;
+            /*边框border 是一个符合属性(按照：上 右 下 左 的顺序)*/
+            border-style: solid;
+            /*border-top-width: 1px;
+            border-left-width: 5px;
+            border-bottom-width: 5px;
+            border-right-width: 5px;*/
+            border-width: 1px 5px 5px 5px;
+
+            /*border: solid red 3px;
+            display: inline;*/
+        }
+
+        #div4 {
+            display: block;
+            width: 120px;
+            height: 50px;
+
+            border: dotted rebeccapurple 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="font40">我是一个div</div>
+    <div id="div2" class="font40">我是一个div</div>
+    <div id="div3"><a href="#">我是一个div</a></div>
+    <span id="div4" class="font40">我是一个span</span>
+    <ul>
+        <li class="first">第一个</li>
+        <li class="second">第二个</li>
+        <li class="third">第三个</li>
+        <li class="fourth">第四个</li>
+    </ul>
+
+    <ol>
+        <li>有序第一个</li>
+        <li><a href="#">有序第二个</a></li>
+        <li>有序第三个</li>
+        <li>有序第四个</li>
+    </ol>
+</body>
+</html>

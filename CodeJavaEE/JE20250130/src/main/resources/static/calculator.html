@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易计算器</title>
+</head>
+<body>
+    <h1>简易计算器</h1>
+    <form action="calc/calculate" method="post">
+        <select name="operation" id="operation" value="选择运算类型">
+            <option value="sum">加法</option>
+            <option value="sub">减法</option>
+            <option value="mul">乘法</option>
+            <option value="div">除法</option>
+        </select>
+        <br><br>
+        数字1：<input name="num1" type="number"><br>
+        数字2：<input name="num2" type="number"><br>
+        <input type="submit" value=" 计算 ">
+    </form>
+    <div id="resultArea" style="margin-top: 20px;">
+
+    </div>
+</body>
+</html>

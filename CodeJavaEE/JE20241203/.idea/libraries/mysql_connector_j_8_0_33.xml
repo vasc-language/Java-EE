@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="mysql-connector-j-8.0.33">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/api/mysql-connector-j-8.0.33.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/jstl/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/jstl/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/utils/commons-dbutils-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaEE1/utils/druid-1.1.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

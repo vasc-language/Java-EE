@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个HTML文件</title>
+</head>
+<body>
+<!--标题标签 h1-h6-->
+    <h1>我是一级标题</h1>
+    <h2>我是二级标题</h2>
+    <h3>我是三级标题</h3>
+    <h4>我是四级标题</h4>
+    <h5>我是五级标题</h5>
+    <h6>我是六级标题</h6>
+<!--段落标签: p
+1）怕标签描述的段落，前面是没有缩进的
+2）自动根据浏览器宽度来决定排版
+3）HTML内容首尾处的换行，空格均是无效的
+4）在HTML中文字之间输入的多个空格只相当于一个空格
+5）HTML中直接输入换行不会真的换行，而是相当于一个空格
+-->
+    <p>
+        这是一个段落：
+        科技创新成果转化是科技创新的重要环节。然而，当前中国科技创新成果转化率低的问题较为突出。
+        这主要是由于科技创新与市场需求脱节、创新成果转化机制不完善等原因造成的。这导致大量     科技
+        成果无法转化为现实生产力，制约了科技创新对经济社会发展的推动作用。
+    </p>
+<!--图⽚标签: img
+img 标签必须带有 src 属性. 表⽰图⽚的路径
+-->
+    <img src="pig.jpg" width="600" height="619" alt="这是一个可爱的pig"></br>
+<!--超链接a
+href：必须具备，表示点击后会跳转到哪个页面
+target：打开方式默认是_self，如果是blank则用新的标签页打开
+-->
+
+<!--链接的几种形式：
+1）外部链接：href引用其他网站的地址
+2）内部链接：网站内部页面之间的链接，写相对路径即可
+3）空链接：使用 # 在href中占位
+-->
+    <a href="https://www.jd.com/?cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch
+            &utm_term=801958379710_0_99386c92bd3c49a8b6e2519373d7467c" target="_blank">外部链接：京东主页</a></br>
+
+    <a href="pig.jpg" target="_blank">内部链接：这是一个pic</a></br>
+
+    <a href="#">这是一个空链接</a></br>
+<!--表格标签
+1）table标签：表示整个表格
+2）tr：表示表格的一行
+3）td：表示一个单元格
+4）thead：表格的头部区域
+5）tbody：表格的主题区域
+-->
+
+<!--表格的一些属性：
+1）align：是表格相对于周围元素的对齐方式 align="center" （居中对齐）
+2）border：表示边框，1表示有边框（数字越大，边框越大），"" 表示没边框
+3）cellpadding：内容距离边框的距离，默认为1像素
+4）cellspacing：单元格之间的距离，默认为2像素
+5）width/height：设置尺寸
+-->
+    <table style="width: 500px; height: 400px;" border="1px red" cellpadding="0">
+        <tr>
+            <td colspan="2">aaa</td>
+<!--            <td>eee</td>-->
+        </tr>
+        <tr>
+            <td>bbb</td>
+            <td rowspan="3">fff</td>
+        </tr>
+        <tr>
+            <td>ccc</td>
+<!--            <td>ggg</td>-->
+        </tr>
+        <tr>
+            <td>ddd</td>
+<!--            <td>hhh</td>-->
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表白墙</title>
+    <!-- CSS代码 -->
+    <style>
+        .container {
+            width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            /* border: 1px black solid; */
+            text-align: center;
+        }
+
+        .grey {
+            color: grey;
+        }
+
+        .container .row {
+            width: 350px;
+            height: 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .row input {
+            width: 260px;
+            height: 30px;
+        }
+
+        #submit {
+            width: 350px;
+            height: 40px;
+            background-color: orange;
+            color: white;
+            border: none;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>留言板</h1>
+        <p class="grey">输入后点击提交，会将信息显示在下方空白处</p>
+        <div class="row">
+            <span>谁:</span> <input type="text" id="from">
+        </div>
+        <div class="row">
+            <span>对谁:</span> <input type="text" id="to">
+        </div>
+        <div class="row">
+            <span>说什么:</span> <input type="text" id="say">
+        </div>
+        <input type="button" value="提交" id="submit" onclick="submit()">
+    </div>
+
+    <!-- JS代码 -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        function submit() {
+            let from = $("#from").val();
+            let to = $("#to").val();
+            let say = $("#say").val();
+
+            if (from === "" || to === "" || say === "") {
+                return;
+            }
+
+            let html = "<div> " + from + " 对 " + to + " 说："  + say + "  </div>";
+            $(".container").append(html);
+
+            // 输出一条留言就重置
+            $("#from").val("");
+            $("#to").val("");
+            $("#say").val("");
+        }
+    </script>
+</body>
+</html>

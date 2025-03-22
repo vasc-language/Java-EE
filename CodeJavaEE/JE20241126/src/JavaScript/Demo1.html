@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery 语法</title>
+    <!--引用jquery标签库-->
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <span id="element">页面元素</span>
+    </div>
+
+    <input type="text" value="input" id="name">
+
+
+    <a href="https://www.jd.com/">京东</a>
+
+
+    <div style="font-size: 40px" id="DIV">我是一个DIV</div>
+
+
+    <ol>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+    </ol><br>
+
+    <!--<bottom>我是一个按钮</bottom>-->
+    <input type="button" value="按钮" id="DUT">
+
+    <!-- JQuery语法 -->
+    <script>
+        /**
+         * 基础语法： 通过选取HTML元素，并对选取的元素执行某种操作
+         * $(selector).action()
+         * 1）$() 是一个函数，他是JQuery提供一个全局函数，用于选择和操作HTML元素
+         * 2）selector 选择器，用来查询和查找 HTML元素
+         * 3）action 操作，执行元素的操作
+         *
+         * JQuery 的代码通常写在 document ready 函数中
+         * document：整个文档对象，一个页面就是一个文档对象，使用document表示
+         * $(document).ready(function)() {
+         *     // JQuery function go here
+         * }
+         */
+
+        // 添加元素
+        $("ol").append("append: 在标签外的头部");
+        $("ol").prepend("prepend: 在标签的结尾");
+
+        $("ol").after("before: 在标签内的结尾");
+        $("ol").before("after: 在标签内的头部");
+
+        // 删除元素
+        $("ol").remove(); // 删除被选元素（及其子元素）
+        // $("ol").empty(); // 删除被选元素的子元素
+
+        $("#content").click(function () {
+            // 1. 获取页面元素内容
+            console.log($(this).text()); // 不能获取HTML标签
+            console.log($(this).html()); // 会返回HTML标签
+            console.log($("#name").val()); // 获取标签中的value值
+
+            // 2. 修改页面元素
+            // $(this).text("<h1>我是点击后的内容</h1>"); // <h1>我是点击后的内容</h1>
+            $(this).html("<h1>我是点击后的内容</h1>"); // 我是点击后的内容 内容加粗
+            $("#name").val("INPUT");
+        });
+
+        console.log($("a").attr("href")); // 在控制台输出href地址（获得value值）
+        $("a").attr("href", "https://www.youdao.com/"); // 从京东地址转到有道地址
+
+        // 操作CSS
+        $("#DIV").click(function () {
+            console.log($("div").css("font-size"));
+            $("div").css("font-size", "20px");
+        });
+
+        $(document).ready(function () {
+            alert("页面加载完成！");
+        });
+
+        $("#DUT").click(function () {
+            alert("弹窗：我是一个按钮");
+        });
+
+    </script>
+</body>
+</html>
