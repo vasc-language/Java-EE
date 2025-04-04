@@ -1,0 +1,6 @@
+captcha:
+  width: 150
+  height: 50
+  session:
+    key: CAPTCHA_SESSION_KEY
+    date: CAPTCHA_SESSION_DATE

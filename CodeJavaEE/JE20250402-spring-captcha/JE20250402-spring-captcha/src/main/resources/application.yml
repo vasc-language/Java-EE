@@ -1,0 +1,58 @@
+## 自定义的key
+#aa:
+#  bb:
+#    dd:
+#      6
+#    cc:
+#      10
+#
+## 字符串
+#string:
+#  value: helloWorld
+#
+## 布尔值，true或false
+#boolean.value: true
+#boolean.value1: false
+#
+## 整数
+#int.value: 10
+#
+## 浮点数
+#float.value: 3.14159
+#
+## Null，~代表null
+#null.value: ~
+#
+## "" 空字符串
+##, 直接后面什么都不加就可以了, 但这种方式不直观, 更多的表示是使用引号括起来
+#empty.value: ''
+
+# 必须是这种格式
+# 冒号（:）后面空一个格子
+my:
+  key3: Hello
+  key4: 5
+
+person:
+  age: 30
+  name: lisi
+  id: 1
+
+dbtypes:
+  id: 2
+  name:
+    - mysql1
+    - mysql2
+    - mysql3
+  ball:
+    k1: v1
+    k2: v2
+    k3: v3
+
+captcha:
+  height: 50
+  width: 150
+  session:
+    key: CAPTCHA_SESSION_KEY
+    date: CAPTCHA_SESSION_DATE
+

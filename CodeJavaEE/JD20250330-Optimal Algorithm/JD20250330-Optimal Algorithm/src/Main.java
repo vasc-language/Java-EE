@@ -1,0 +1,12 @@
+/**
+ * Created with IntelliJ IDEA.
+ * Description:
+ * User: 姚东名
+ * Date: 2025-03-30
+ * Time: 20:32
+ */
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}

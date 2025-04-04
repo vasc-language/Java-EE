@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<!-- 这三行代码都是与控制浏览器（或代理服务器）缓存行为相关，
+ 目的是阻止浏览器使用缓存的页面版本，强制它每次都从服务器请求最新版本-->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+
+  <title>验证码</title>
+  <style>
+    #inputCaptcha {
+      height: 30px;
+      vertical-align: middle; 
+    }
+    #verificationCodeImg{
+      vertical-align: middle; 
+    }
+    #checkCaptcha{
+      height: 40px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>输入验证码</h1>
+  <div id="confirm">
+    <input type="text" name="inputCaptcha" id="inputCaptcha">
+    <img id="verificationCodeImg" src="/captcha/getCaptcha" style="cursor: pointer;" title="看不清？换一张" />
+    <input type="button" value="提交" id="checkCaptcha">
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    
+    $("#verificationCodeImg").click(function(){
+      $(this).hide().attr('src', '/captcha/getCaptcha?dt=' + new Date().getTime()).fadeIn();
+    });
+
+    $("#checkCaptcha").click(function () {
+      $.ajax({
+        // type、url、data、success
+        type: "post",
+        url: "captcha/check",
+        data: {
+          // 将用户输入的验证码，发送到后端
+          captcha: $("#inputCaptcha").val()
+        },
+        success: function (result) {
+          if (result) {
+            location.href = "success.html";
+          } else {
+            alert("验证码校验失败，请重新输入");
+          }
+        }
+      })
+        // alert("验证码校验");
+    });
+
+  </script>
+</body>
+
+</html>
