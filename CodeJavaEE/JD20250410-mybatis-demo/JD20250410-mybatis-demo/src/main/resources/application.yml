@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: JD20250410-mybatis-demo
+    # \u6570\u636E\u5E93\u914D\u7F6E
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_test?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 212409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true # \u4F7F\u5F97\u9A7C\u5CF0\u81EA\u52A8\u8F6C\u6362
+
