@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.or
+dtd/mybatis-3-mapper.dtd">
+<!-- 文件路径一定得对的上 UserInfoMapperXML.java -->
+<mapper namespace="org.example.jd20250410mybatisdemo.mapper.ArticleInfoMapper">
+
+    <!-- selectArticleInfo --> 
+
+    <select id="selectArticleInfo">
+        SELECT 
+        ta.*,
+        tb.username,
+        tb.age
+        FROM article_info ta
+        LEFT JOIN user_info tb
+        ON ta.uid = tb.id
+        WHERE ta.id = 1
+    </select>
+</mapper>
+
+<!-- 在企业开发中,应该尽量避免使用多表查询,这是为什么? -->

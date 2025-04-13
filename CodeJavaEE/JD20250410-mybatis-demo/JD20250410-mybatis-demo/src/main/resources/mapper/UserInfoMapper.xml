@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 文件路径一定得对的上 UserInfoMapperXML.java -->
+<mapper namespace="org.example.jd20250410mybatisdemo.mapper.UserInfoMapperXML">
+
+<!-- 查询映射解决方案  
+1. 起别名
+2. 使用 ResultMap 标签设置映射规则
+3. 配置驼峰自动转换(在application.yml 配置文件中配置)
+ -->
+    <resultMap id="BaseMap" type="org.example.jd20250410mybatisdemo.model.UserInfo">
+        <id property="id" column="id"></id>
+        <result property="deleteFlag" column="delete_flag"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="updateTime" column="update_time"></result>
+    </resultMap>
+
+    <select id="selectAll" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
+        SELECT * FROM `user_info`
+    </select>
+
+    <!-- selectAll2 -->
+    <!-- 1. 起别名 -->
+    <select id="selectAll2" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
+
+--           SELECT * FROM `user_info`
+        SELECT id, username, password, age, gender, phone,
+        delete_flag AS deleteFlag,
+        create_time AS createTime,
+        update_time AS updateTime
+        FROM user_info
+    </select>
+    <!--    2. 使用 ResultMap 标签设置映射规则-->
+    <select id="selectAll3" resultMap="BaseMap">
+        SELECT * FROM `user_info`
+    </select>
+
+
+
+
+    <!-- selectByNameAndPassword --> 
+
+    <select id="selectByNameAndPassword" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
+        SELECT * FROM user_info WHERE username = #{username} AND password = #{password}
+    </select>
+    
+
+    <!-- insertUser -->
+    <insert id="insertUser">
+        INSERT INTO user_info (username, `password`, age) VALUES (#{username}, #{password}, #{age})
+    </insert>
+
+    <!-- insertUser2 --> 
+
+    <insert id="insertUser2" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user_info (username, `password`, age) 
+        VALUES (#{userInfo.username}, #{userInfo.password}, #{userInfo.age})
+    </insert>
+
+    <!-- UpdateUser --> 
+
+    <update id="UpdateUser">
+        UPDATE user_info SET username = #{username}, `password` = #{password}, age = #{age} WHERE id = #{id}
+    </update>
+
+    <!-- deleteUser --> 
+
+    <delete id="deleteUser">    
+        DELETE FROM user_info WHERE id = #{id}
+    </delete>   
+
+    
+</mapper>
