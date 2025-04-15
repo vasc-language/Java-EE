@@ -59,13 +59,14 @@ public interface UserInfoMapper {
 
     // 2. 传递多个参数 -> 使用注释 @Param 来进行参数的绑定，避免 Spring 容器在进行对象赋值发生混乱
 
+     // 这个使用 #{}
     @Select("SELECT * FROM user_info WHERE username = #{userName} AND `password` = #{password};")
     List<UserInfo> selectByNameAndPassword(
         @Param("userName") String username, 
         @Param("password") String password);
         
-    // 即使
-    @Select("SELECT * FROM user_info WHERE username = #{userName} AND `password` = #{password};")
+    // 这个使用 ${}
+    @Select("SELECT * FROM user_info WHERE username = '${userName}' AND `password` = '${password}';")
     List<UserInfo> selectByNameAndPassword2(
         @Param("password") String password,
         @Param("userName") String username
@@ -105,4 +106,56 @@ public interface UserInfoMapper {
 
     // 数据库查询时，存在当字段名和属性名对不上（例如delete_Flag 和 deleteFlag 不相同）
     // 1. 
+
+    // 测试#{} 和 ${}
+    @Select("SELECT * FROM `user_info` WHERE id = #{id}")
+    UserInfo selectAllById5(Integer id);
+
+    @Select("SELECT * FROM `user_info` WHERE id = ${id}")
+    UserInfo selectAllById6(Integer id);
+
+    @Select("SELECT * FROM user_info WHERE username = #{username} AND `password` = #{password}")
+    List<UserInfo> selectByNameAndPassword4(
+            @Param("username") String userName,
+            @Param("password") String password
+    );
+
+     // @Select("SELECT * FROM user_info WHERE username = '${username}' AND `password` = '${password}'")
+     // @Select("SELECT * FROM `user_info` where username='${username}' and `password` = '${password}' ")
+     @Select("SELECT * FROM `user_info` where username='${username}' and `password` = '${password}' ")
+     List<UserInfo> selectByNameAndPassword5(
+             @Param("username") String userName,
+             @Param("password") String password
+     );
+
+     // 但是 ${} 有其的用途
+     // Preparing: SELECT * FROM user_info ORDER BY id DESC
+     /**
+      * ${} 适用场景
+      * 1. 动态表名：FROM ${tableName}
+      * 2. 动态列名：ORDER BY ${columnName}
+      * 3. 动态SQL关键字：ORDER BY id ${orderDirection}（ASC/DESC）
+      * 4. 特殊SQL结构：需要在SQL结构中插入不同关键字的场景
+      * @param order
+      * @return
+      */
+     @Select("SELECT * FROM user_info ORDER BY id ${order}")
+     List<UserInfo> selectUserByOrder(String order);
+
+     @Select("SELECT * FROM user_info ORDER BY id #{order}")
+    List<UserInfo> selectUserByOrder2(String order);
+
+     // 模糊查询
+     // ${}
+     @Select("SELECT * FROM user_info WHERE username LIKE CONCAT('%','${username}','%')")
+     List<UserInfo> selectUserInfoByLike(@Param("username") String userName);
+
+     // #{}
+     /**
+      * 模糊查询使用 concat 函数配合#{}：既保证功能又保证安全
+      * @param userName
+      * @return
+      */
+     @Select("SELECT * FROM user_info WHERE username LIKE CONCAT('%',#{username},'%')")
+     List<UserInfo> selectUserInfoByLike2(@Param("username") String userName);
 }

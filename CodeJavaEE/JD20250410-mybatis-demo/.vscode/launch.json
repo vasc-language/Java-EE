@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Jd20250410MybatisDemoApplication<JD20250410-mybatis-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.example.jd20250410mybatisdemo.Jd20250410MybatisDemoApplication",
+            "projectName": "JD20250410-mybatis-demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

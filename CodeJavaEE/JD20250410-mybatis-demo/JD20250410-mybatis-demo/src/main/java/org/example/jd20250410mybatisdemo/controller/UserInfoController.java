@@ -40,4 +40,22 @@ public class UserInfoController {
     public List<UserInfo> getUserInfoByNameAndPassword(String userName, String password) {
         return userInfoService.selectByNameAndPassword(userName, password);
     }
+
+    /**
+     *用户登陆界面
+     * @param username
+     * @param password
+     * @return true 密码正确 false 密码错误
+     */
+    @RequestMapping("/login4")
+    public boolean login1(String username, String password) {
+        UserInfo userInfos = userInfoService.queryUserByNameAndPassword4(username, password);
+        return userInfos == null ? false : true;
+    }
+
+    @RequestMapping("/login5")
+    public boolean login2(String username, String password) {
+        UserInfo userInfos = userInfoService.queryUserByNameAndPassword5(username, password);
+        return userInfos == null ? false : true;
+    }
 }

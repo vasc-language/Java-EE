@@ -40,4 +40,27 @@ public class UserInfoService {
     public List<UserInfo> selectByNameAndPassword(String userName, String password) {
         return userInfoMapper.selectByNameAndPassword(userName, password);
     }
+
+    // 比较 #{}  和 ${}
+    public UserInfo queryUserByNameAndPassword4(String username, String password) {
+        List<UserInfo> userInfos = userInfoMapper.selectByNameAndPassword4(username, password);
+        /**
+         * 对 #{} 和 ${} 进行测试
+         * #{} 按照设想，只能查询出一条数据
+         * ${} 按照设想，可以查询出多条数据
+         */
+        if (userInfos != null && userInfos.size() >= 1) {
+            return userInfos.get(0);
+        }
+        return null;
+    }
+
+    public UserInfo queryUserByNameAndPassword5(String username, String password) {
+        List<UserInfo> userInfos = userInfoMapper.selectByNameAndPassword5(username, password);
+        if (userInfos != null && userInfos.size() >= 1){
+            // ${} 按照设想，可以查询出多条数据
+            return userInfos.get(0);
+        }
+        return null;
+    }
 }
