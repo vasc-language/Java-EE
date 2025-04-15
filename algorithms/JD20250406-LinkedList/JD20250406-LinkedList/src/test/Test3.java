@@ -118,5 +118,27 @@ public class Test3 {
         printList(head2);
         System.out.print("输出: ");
         printList(solution.reverseKGroup(head2, 3));
+        System.out.println();
+        
+        // 示例3: 测试用例 - 不均匀长度的链表和较大的k值
+        System.out.println("示例3: 特殊情况测试");
+        int[] arr3 = {-2, 11, 4, 13, 5, 20, 7};
+        ListNode head3 = createList(arr3);
+        System.out.print("输入: ");
+        printList(head3);
+        System.out.println("k=4");
+        System.out.print("输出: ");
+        printList(solution.reverseKGroup(head3, 4));
+        System.out.println("预期结果: [13,4,11,-2,7,20,5]");
+        
+        // 示例4: 边界情况 - k=1 时不翻转
+        System.out.println("\n示例4: k=1 (不翻转)");
+        int[] arr4 = {11, -4, 13, 5};
+        ListNode head4 = createList(arr4);
+        System.out.print("输入: ");
+        printList(head4);
+        System.out.print("输出: ");
+        printList(solution.reverseKGroup(head4, 1));
+        System.out.println("预期结果: [11,-4,13,5]");
     }
 }

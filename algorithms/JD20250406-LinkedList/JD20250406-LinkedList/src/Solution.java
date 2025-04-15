@@ -1,7 +1,5 @@
 import java.util.PriorityQueue;
 
-import test.ListNode;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
