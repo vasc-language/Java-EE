@@ -3,11 +3,11 @@
 <!-- 文件路径一定得对的上 UserInfoMapperXML.java -->
 <mapper namespace="org.example.jd20250410mybatisdemo.mapper.UserInfoMapperXML">
 
-<!-- 查询映射解决方案  
-1. 起别名
-2. 使用 ResultMap 标签设置映射规则
-3. 配置驼峰自动转换(在application.yml 配置文件中配置)
- -->
+    <!-- 查询映射解决方案
+    1. 起别名
+    2. 使用 ResultMap 标签设置映射规则
+    3. 配置驼峰自动转换(在application.yml 配置文件中配置)
+     -->
     <resultMap id="BaseMap" type="org.example.jd20250410mybatisdemo.model.UserInfo">
         <id property="id" column="id"></id>
         <result property="deleteFlag" column="delete_flag"></result>
@@ -16,58 +16,200 @@
     </resultMap>
 
     <select id="selectAll" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
-        SELECT * FROM `user_info`
+        SELECT *
+        FROM `user_info`
     </select>
 
     <!-- selectAll2 -->
     <!-- 1. 起别名 -->
     <select id="selectAll2" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
 
---           SELECT * FROM `user_info`
-        SELECT id, username, password, age, gender, phone,
-        delete_flag AS deleteFlag,
-        create_time AS createTime,
-        update_time AS updateTime
+        -- SELECT * FROM `user_info`
+        SELECT id,
+               username,
+               password,
+               age,
+               gender,
+               phone,
+               delete_flag AS deleteFlag,
+               create_time AS createTime,
+               update_time AS updateTime
         FROM user_info
     </select>
     <!--    2. 使用 ResultMap 标签设置映射规则-->
     <select id="selectAll3" resultMap="BaseMap">
-        SELECT * FROM `user_info`
+        SELECT *
+        FROM `user_info`
     </select>
 
 
-
-
-    <!-- selectByNameAndPassword --> 
+    <!-- selectByNameAndPassword -->
 
     <select id="selectByNameAndPassword" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
-        SELECT * FROM user_info WHERE username = #{username} AND password = #{password}
+        SELECT *
+        FROM user_info
+        WHERE username = #{username}
+          AND password = #{password}
     </select>
-    
+
 
     <!-- insertUser -->
     <insert id="insertUser">
-        INSERT INTO user_info (username, `password`, age) VALUES (#{username}, #{password}, #{age})
+        INSERT INTO user_info (username, `password`, age)
+        VALUES (#{username}, #{password}, #{age})
     </insert>
 
-    <!-- insertUser2 --> 
+    <!-- insertUser2 -->
 
     <insert id="insertUser2" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO user_info (username, `password`, age) 
+        INSERT INTO user_info (username, `password`, age)
         VALUES (#{userInfo.username}, #{userInfo.password}, #{userInfo.age})
     </insert>
+    <!--    测试动态SQl-->
+<!--    1. <if> 标签：<if test="username!=null">
+            username!=null 为条件表达式 username 为属性名，而不是字段名
+            每个 <if> 标签检查对应的属性是否为null
+        2. <trim> 标签：<trim prefixOverrides="," suffixOverrides="," prefix="(" suffix=")">
+            - prefix：表示整个语句块，以 prefix 的值作为前缀
+            - suffix：表示整个语句块，以 suffix 的值作为后缀
+            - prefixOverrides：表示整个语句块要去除的前缀
+            - suffixOverrides：表示整个语句块要去除的后缀
+        3. <where> 标签
+            - 自动处理 where 关键字
+            - 智能处理条件连接词
+            - 无需手动拼接
+        4. <set> 标签
+            - 自动处理 set 关键字
+            - 自动处理多余逗号（<set>已经有了suffixOverrides=","的功能）
+            - 动态构建更新字段
+        5. <foreach> 标签：<foreach collection="ids" open="(" separator="," close=")" item="id">
+            - 应用场景：批量删除（IN 条件）、批量插入、批量更新、动态 WHERE 条件（OR 拼接）、多值参数查询、处理不同的类型的集合
+            - collection：指定要遍历的集合
+            - item：集合中每一项的集合
+            - index：当前项的索引或 Map 的键
+            - open：遍历开始前要拼接的字符串
+            - separator：每项之间的分隔符
+            - close：遍历完成后要拼接的字符串
+-->
+<!--    INSERT INTO user_info ( username, `password`, age, gender, phone ) VALUES ( ?, ?, ?, ?, ? )-->
+    <insert id="insertUser3">
+        INSERT INTO user_info
+        <trim prefixOverrides="," suffixOverrides="," prefix="(" suffix=")">
+            <if test="username!=null">
+                username,
+            </if>
+            <if test="password!=null">
+                `password`,
+            </if>
+            <if test="age!=null">
+                age,
+            </if>
+            <if test="gender!=null">
+                gender,
+            </if>
+            <if test="phone!=null">
+                phone
+            </if>
+        </trim>
+        VALUES
+        <trim prefixOverrides="," suffixOverrides="," prefix="(" suffix=")">
+            <if test="username!=null">
+                #{username},
+            </if>
+            <if test="password!=null">
+                #{password},
+            </if>
+            <if test="age!=null">
+                #{age},
+            </if>
+            <if test="gender!=null">
+                #{gender},
+            </if>
+            <if test="phone!=null">
+                #{phone},
+            </if>
+        </trim>
+    </insert>
+    <insert id="batchInsertUsers">
+        INSERT INTO user_info (username, `password`) VALUES
+        <foreach collection="userInfos" item="userInfo" separator=",">
+            (#{userInfo.username}, #{userInfo.password})
+        </foreach>
+    </insert>
+    <!-- <insert id="insertUser4">
+        INSERT INTO user_info
+        <foreach collection="userInfos" separator="," item="userInfo">
+            (username, `password`)
+        </foreach>
+        VALUES
+        <foreach collection="userInfos" separator="," item="userInfo">
+            (#{userInfo.username}, #{userInfo.password})
+        </foreach>
+    </insert> -->
 
-    <!-- UpdateUser --> 
+    <!-- UpdateUser -->
 
     <update id="UpdateUser">
-        UPDATE user_info SET username = #{username}, `password` = #{password}, age = #{age} WHERE id = #{id}
+        UPDATE user_info
+        SET username   = #{username},
+            `password` = #{password},
+            age        = #{age}
+        WHERE id = #{id}
     </update>
 
-    <!-- deleteUser --> 
+    <update id="updateByConfition">
+        UPDATE user_info
+            <set>
+                <if test="username!=null">
+                    username = #{username},
+                </if>
+                <if test="password!=null">
+                    `password` = #{username},
+                </if>
+                <if test="age!=null">
+                    age = #{age},
+                </if>
+            </set>
+        WHERE id = #{id}
+    </update>
 
-    <delete id="deleteUser">    
-        DELETE FROM user_info WHERE id = #{id}
-    </delete>   
 
-    
+    <!-- deleteUser -->
+    <delete id="deleteUser">
+        DELETE
+        FROM user_info
+        WHERE id = #{id}
+    </delete>
+
+
+    <select id="selectByCondition" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
+        SELECT * FROM user_info
+         <where>
+            <if test="phone!=null">
+                phone = #{phone}
+            </if>
+            <if test="password!=null">
+                AND `password` = #{password}
+            </if>
+         </where>
+    </select>
+    <sql id="sql">
+        SELECT * FROM user_info
+    </sql>
+    <select id="selectAllBySQL" resultType="org.example.jd20250410mybatisdemo.model.UserInfo">
+        <include refid="sql"></include>
+    </select>
+
+    <!--(21, 22, 23, 24)-->
+    <delete id="batchDelete">
+        DELETE FROM user_info
+        <where>
+            id IN
+            <foreach collection="ids" open="(" separator="," close=")" item="id">
+                #{id}
+            </foreach>
+        </where>
+    </delete>
+
+
 </mapper>

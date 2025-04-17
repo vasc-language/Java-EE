@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.example.jd20250410mybatisdemo.model.UserInfo;
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -96,7 +97,7 @@ class UserInfoMapperXMLTest {
         
         // 调用更新方法
         Integer result = userInfoMapperXML.updateUser(newUsername, newPassword, age, id);
-        
+
         // 输出更新结果
         System.out.println("更新成功! 更新条数为:" + result);
         
@@ -122,5 +123,78 @@ class UserInfoMapperXMLTest {
         Integer id = 17;
         Integer result = userInfoMapperXML.deleteUser(id);
         System.out.println("删除成功! 更新条数为:" + result);
+    }
+
+    @Test
+    void insertUser3() {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUsername("username4");
+        userInfo.setPassword("username4");
+        userInfo.setAge(4);
+//        userInfo.setGender(1);
+        userInfo.setPhone("1004");
+
+        // System.out.println();
+        Integer result = userInfoMapperXML.insertUser3(userInfo);
+        System.out.println("插入成功！插入条数：" + result);
+    }
+
+    @Test
+    void batchInsertUsers() {
+        // 创建第一个用户对象
+        UserInfo userInfo1 = new UserInfo();
+        userInfo1.setUsername("批量用户1");
+        userInfo1.setPassword("批量密码1");
+        
+        // 创建第二个用户对象
+        UserInfo userInfo2 = new UserInfo();
+        userInfo2.setUsername("批量用户2");
+        userInfo2.setPassword("批量密码2");
+        
+        // 创建用户列表并添加用户对象
+        List<UserInfo> userInfos = new ArrayList<>();
+        userInfos.add(userInfo1);
+        userInfos.add(userInfo2);
+
+        // 调用批量插入方法
+        Integer result = userInfoMapperXML.batchInsertUsers(userInfos);
+        System.out.println("批量插入成功！插入条数：" + result);
+    }
+
+    @Test
+    void selectByCondition() {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setPassword("username24");
+        userInfo.setPhone("1004");
+
+        userInfoMapperXML.selectByCondition(userInfo)
+                .stream()
+                .forEach(userInfo1 -> System.out.println(userInfo1));
+    }
+
+    @Test
+    void updateByConfition() {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUsername("程昱");
+//        userInfo.setPassword("张景岩");
+        userInfo.setAge(20);
+        userInfo.setId(23);
+
+        Integer result = userInfoMapperXML.updateByConfition(userInfo);
+        System.out.println("更新成功！更新条数为：" + result);
+    }
+
+    @Test
+    void batchDelete() {
+        // 删除 id in(11, 12, 13, 14, 15)
+        List<Integer> ids = List.of(11, 12, 13, 14, 15);
+        userInfoMapperXML.batchDelete(ids);
+    }
+
+    @Test
+    void selectAllBySQL() {
+        userInfoMapperXML.selectAllBySQL()
+                .stream()
+                .forEach(userInfo -> System.out.println(userInfo));
     }
 }

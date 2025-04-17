@@ -43,11 +43,28 @@ public interface UserInfoMapperXML {
     // 插入一条数据, 返回自增的主键 + 绑定参数
     Integer insertUser2(@Param("userInfo") UserInfo userInfo);
 
+
     // 更新一条数据
     Integer updateUser(String username, String password, Integer age, Integer id);
 
     // 删除一条数据
     Integer deleteUser(Integer id);
 
+    // 测试动态SQL
+    // 添加 <if> 和 <trim>
+    Integer insertUser3(UserInfo userInfo);
+
+    // 添加 <foreach> 批量插入
+    Integer batchInsertUsers(@Param("userInfos") List<UserInfo> userInfos);
+    // 添加 <where>
+    List<UserInfo> selectByCondition(UserInfo userInfo);
+    // 添加 <set>
+    Integer updateByConfition(UserInfo userInfo);
+
+    // 添加 <forEach> 批量删除
+    Integer batchDelete(List<Integer> ids); //
+
+    // 添加 <sql>
+    List<UserInfo> selectAllBySQL();
 
 }
