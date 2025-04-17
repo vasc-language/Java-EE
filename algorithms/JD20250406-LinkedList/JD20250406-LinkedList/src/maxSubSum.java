@@ -18,7 +18,11 @@ class Solution2 {
 
         return Math.max(ans, 0);
     }
-
+    /**
+     * 
+     * @param a
+     * @return
+     */
     public ArrayList<Integer> maxSub(int a[]) {    //求一个最大连续子序列
         int n = a.length;
         ArrayList<Integer> x = new ArrayList<>();

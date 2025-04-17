@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        .container {
+            width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            /* border: 1px black solid; */
+            text-align: center;
+        }
+
+        .grey {
+            color: grey;
+        }
+
+        .container .row {
+            width: 350px;
+            height: 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .row input {
+            width: 260px;
+            height: 30px;
+        }
+
+        #submit {
+            width: 350px;
+            height: 40px;
+            background-color: #f8c203;
+            color: white;
+            border: none;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>留言板</h1>
+    <p class="grey">输入后点击提交, 会将信息显示下方空白处</p>
+    <div class="row">
+        <span>谁:</span> <input type="text" name="" id="from">
+    </div>
+    <div class="row">
+        <span>对谁:</span> <input type="text" name="" id="to">
+    </div>
+    <div class="row">
+        <span>说什么:</span> <input type="text" name="" id="say">
+    </div>
+    <input type="button" value="提交" id="submit" onclick="submit()">
+    <!-- <div>A 对 B 说: hello</div> -->
+</div>
+
+<script src="jquery.min.js"></script>
+<script>
+    load();
+
+    // 从数据库中拿出之前存储的内容，并放到留言板上
+    function load() {
+        $.ajax({
+            type: "get",
+            url: "/message/getList",
+            success: function (messages) {
+                if (messages != null && messages.length > 0) {
+                    var finalHtml = "";
+                    for (var m of messages) {
+                        finalHtml += "<div>" + m.from + "对" + m.to + "说:" + m.message + "</div>";
+                    }
+                    $(".container").append(finalHtml);
+                }
+
+            }
+        });
+    }
+
+    function submit() {
+        //1. 获取留言的内容，放到数据库中
+        var from = $('#from').val();
+        var to = $('#to').val();
+        var say = $('#say').val();
+        if (from == '' || to == '' || say == '') {
+            return;
+        }
+        var data = {
+            from: from,
+            to: to,
+            message: say
+        };
+
+        $.ajax({
+            type: "post",
+            url: "/message/publish",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (result) {
+
+                var jsonObj = JSON.parse(result);
+
+                if (jsonObj.ok == 1) {
+                    //成功
+                    //2. 构造节点
+                    var divE = "<div>" + from + "对" + to + "说:" + say + "</div>";
+                    //3. 把节点添加到页面上
+                    $(".container").append(divE);
+
+                    //4. 清空输入框的值
+                    $('#from').val("");
+                    $('#to').val("");
+                    $('#say').val("");
+                } else {
+                    //失败
+                    alert("留言发布失败");
+                }
+            }
+
+        });
+    }
+
+</script>
+</body>
+
+</html>

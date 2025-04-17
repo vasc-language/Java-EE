@@ -1,0 +1,4 @@
+2025-04-18T00:11:47.996+08:00  INFO 14508 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-18T00:11:48.164+08:00  INFO 14508 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-18T00:11:48.168+08:00  INFO 14508 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-18T00:11:48.176+08:00  INFO 14508 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
