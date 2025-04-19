@@ -1,9 +1,14 @@
 package org.example.jd20250417springbookdemo.service;
 
+import org.example.jd20250417springbookdemo.enums.BookStatusEnum;
 import org.example.jd20250417springbookdemo.mapper.BookInfoMapper;
 import org.example.jd20250417springbookdemo.model.BookInfo;
+import org.example.jd20250417springbookdemo.model.PageRequest;
+import org.example.jd20250417springbookdemo.model.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,4 +26,30 @@ public class BookInfoService {
     public void addBook(BookInfo bookInfo) {
         bookInfoMapper.addBook(bookInfo);
     }
+
+    // 处理分页情况
+    public ResponseResult<BookInfo> getListByPage(PageRequest pageRequest) {
+        // 1. 获取页码总数
+        // 2. 获取当前页面的数据
+        Integer count = bookInfoMapper.count();
+
+        List<BookInfo> bookInfos = bookInfoMapper.selectBooksByPage(pageRequest);
+        // 对结果进行二次处理 ——> 处理状态码
+        // 0-删除 1-正常 2-不可借阅
+        for (BookInfo bookInfo: bookInfos) {
+            bookInfo.setStatusCN(BookStatusEnum.getStatusByCode(bookInfo.getStatus()).getDesc());
+        }
+        return new ResponseResult<>(count, bookInfos, pageRequest);
+    }
+
+    // 更新修改图书
+    public void updateBook(BookInfo bookInfo) {
+        bookInfoMapper.updateBook(bookInfo);
+    }
+
+    // 批量删除图书
+    public Integer batchDelete(List<Integer> ids) {
+        return bookInfoMapper.batchDelete(ids);
+    }
+
 }

@@ -32,8 +32,31 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script>
+        // login()
         function login() {
-            location.href = "book_list.html";
+            $.ajax({
+                type: "post",
+                url: "/user/login",
+                data: {
+                    username: $("#userName").val(),
+                    password: $("#password").val()
+                },
+                success: function(result){
+                    /**
+                     * 错误解析：
+                     * 前端期望返回一个数据结构是包含 code 和 data 字段的 Result
+                     * 但是之前后端 UserInfoController 的 login() 返回的是 boolean 类型
+                     */
+                    if(result.code == "SUCCESS" && result.data==true){
+                        //账号密码正确
+                        location.href = "book_list.html?currentPage=1";
+                    }else {
+                        alert("账号或密码错误!");
+                        // location.href = "book_list.html?currentPage=1";
+                    }
+                }
+            });
+            // location.href = "book_list.html";
         }
     </script>
 </body>

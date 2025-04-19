@@ -38,71 +38,8 @@
                     <td class="width200">操作</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox" name="selectBook" value="1" id="selectBook" class="book-select"></td>
-                    <td>1</td>
-                    <td>大秦帝国第一册</td>
-                    <td>我是作者</td>
-                    <td>23</td>
-                    <td>33.00</td>
-                    <td>北京出版社</td>
-                    <td>可借阅</td>
-                    <td>
-                        <div class="op">
-                            <a href="book_update.html?bookId=1">修改</a>
-                            <a href="javascript:void(0)" onclick="deleteBook(1)">删除</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="selectBook" value="1" id="selectBook" class="book-select"></td>
-                    <td>2</td>
-                    <td>大秦帝国第二册</td>
-                    <td>我是作者</td>
-                    <td>23</td>
-                    <td>33.00</td>
-                    <td>北京出版社</td>
-                    <td>可借阅</td>
-                    <td>
-                        <div class="op">
-                            <a href="book_update.html?bookId=2">修改</a>
-                            <a href="javascript:void(0)" onclick="deleteBook(2)">删除</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="selectBook" value="1" id="selectBook" class="book-select"></td>
-                    <td>3</td>
-                    <td>大秦帝国第三册</td>
-                    <td>我是作者</td>
-                    <td>23</td>
-                    <td>33.00</td>
-                    <td>北京出版社</td>
-                    <td>可借阅</td>
-                    <td>
-                        <div class="op">
-                            <a href="book_update.html?bookId=3">修改</a>
-                            <a href="javascript:void(0)" onclick="deleteBook(3)">删除</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="selectBook" value="1" id="selectBook" class="book-select"></td>
-                    <td>4</td>
-                    <td>大秦帝国第四册</td>
-                    <td>我是作者</td>
-                    <td>23</td>
-                    <td>33.00</td>
-                    <td>北京出版社</td>
-                    <td>可借阅</td>
-                    <td>
-                        <div class="op">
-                            <a href="book_update.html?bookId=4">修改</a>
-                            <a href="javascript:void(0)" onclick="deleteBook(4)">删除</a>
-                        </div>
-                    </td>
-                </tr>
+            <tbody id="tbody">
+                <!-- 错误修正， $("#tbody").html(finalHtml); 最开始的时候，<tbody>并没有 id="tbody" 属性-->
             </tbody>
         </table>
 
@@ -113,25 +50,86 @@
 
             getBookList();
             function getBookList() {
-                
+                $.ajax({
+                    type: "get",
+                    /**
+                     * url: "/book/getListByPage" + location.search,
+                     * 会把当前的URL的查询参数（如 ?currentPage=2）
+                     * location.href = "book_list.html?currentPage=" + page
+                     * 拼接到请求后面，实现分页
+                    */
+                    url: "/book/getListByPage" + location.search,
+                    // 请求成功后，result.data.records 就是当前的页面的图书列表
+                    success: function (result) {
+                        // 是否登录
+                        if (result == null || result.code == "UNLOGIN") {
+                            alert("用户未登录，请先登录");
+                            location.href = "login.html";
+                        }
+                        // 其他情况判断，此处省略
+                        /**
+                         * 进行参数校验
+                         * result：一个页面所有的内容
+                         * result.code：返回的状态码
+                         * -1 未登录    200 正常  -2 出错
+                         * unLogin 未登录状态 success 返回成功 fail 返回失败
+                         */
+                        if (result == null || result.data == null) {
+                            return;
+                        }
+
+                        var data = result.data;
+
+                        var books = data.records; // 拿到 result（页面） 中所有的信息
+                        var finalHtml = "";
+                        for (var book of books) {
+                            finalHtml += '<tr>';
+                            finalHtml += '<td><input type="checkbox" name="selectBook" value="' + book.id + '" id="selectBook" class="book-select"></td>';
+                            finalHtml += '<td>' + book.id + '</td>';
+                            finalHtml += '<td>' + book.bookName + '</td>';
+                            finalHtml += '<td>' + book.author + '</td>';
+                            finalHtml += '<td>' + book.count + '</td>';
+                            finalHtml += '<td>' + book.price + '</td>';
+                            finalHtml += '<td>' + book.publish + '</td>';
+                            finalHtml += '<td>' + book.statusCN + '</td>';
+                            finalHtml += '<td><div class="op">';
+                            finalHtml += '<a href="book_update.html?bookId=' + book.id + '">修改</a>';
+                            finalHtml += '<a href="javascript:void(0)" onclick="deleteBook(' + book.id + ')">删除</a>';
+                            finalHtml += '</div></td></tr>';
+                        }
+                        $("#tbody").html(finalHtml); // 对 tbody 标签进行赋值操作
+
+                        //翻页信息
+                        $("#pageContainer").jqPaginator({
+                            totalCounts: data.total, //总记录数
+                            pageSize: 10,    //每页的个数
+                            visiblePages: 5, //可视页数
+                            currentPage: data.pageRequest.currentPage,  //当前页码
+                            first: '<li class="page-item"><a class="page-link">首页</a></li>',
+                            prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页<\/a><\/li>',
+                            next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页<\/a><\/li>',
+                            last: '<li class="page-item"><a class="page-link" href="javascript:void(0);">最后一页<\/a><\/li>',
+                            page: '<li class="page-item"><a class="page-link" href="javascript:void(0);">{{page}}<\/a><\/li>',
+                            //页面初始化和页码点击时都会执行
+                            onPageChange: function (page, type) {
+                                // 至关重要的一步
+                                // 只有页面点击时才能执行 if 语句 -> 才能跳转到下一个页面（是页面，而不是页码）
+                                if (type == "change") {
+                                    location.href = "book_list.html?currentPage=" + page;
+                                }
+                                // console.log("第"+page+"页, 类型:"+type);
+                            }
+                        });
+                    },
+                    error: function (error) {
+                        if (error.status == 401) {
+                            alert("用户未登录，请先登录");
+                            location.href = "login.html";
+                        }
+                    }
+                });
             }
-    
-            //翻页信息
-            $("#pageContainer").jqPaginator({
-                totalCounts: 100, //总记录数
-                pageSize: 10,    //每页的个数
-                visiblePages: 5, //可视页数
-                currentPage: 1,  //当前页码
-                first: '<li class="page-item"><a class="page-link">首页</a></li>',
-                prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页<\/a><\/li>',
-                next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页<\/a><\/li>',
-                last: '<li class="page-item"><a class="page-link" href="javascript:void(0);">最后一页<\/a><\/li>',
-                page: '<li class="page-item"><a class="page-link" href="javascript:void(0);">{{page}}<\/a><\/li>',
-                //页面初始化和页码点击时都会执行
-                onPageChange: function (page, type) {
-                    console.log("第"+page+"页, 类型:"+type);
-                }
-            });
+
             function deleteBook(id) {
                 var isDelete = confirm("确认删除?");
                 if (isDelete) {
@@ -151,7 +149,6 @@
                     alert("批量删除成功");
                 }
             }
-
         </script>
     </div>
 </body>

@@ -3,6 +3,7 @@ package org.example.jd20250417springbookdemo.controller;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.example.jd20250417springbookdemo.contant.Constants;
+import org.example.jd20250417springbookdemo.model.Result;
 import org.example.jd20250417springbookdemo.model.UserInfo;
 import org.example.jd20250417springbookdemo.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping("/login")
-    public boolean login(String username, String password, HttpSession session) {
+    public Result login(String username, String password, HttpSession session) {
         /**
          * 验证步骤
          * 1. 参数是否规范
@@ -42,20 +43,20 @@ public class UserInfoController {
          */
         log.info("username: " + username);
         if (!StringUtils.hasLength(username) || !StringUtils.hasLength(password)) {
-            return false;
+            return Result.fail("用户名或密码不能为空");
         }
         // 客户端输入的参数和数据库中的参数进行比较
         UserInfo userInfo = userInfoService.queryUserNameByName(username);
         // 1. 先确认用户是否存在 2. 再确认密码是否正确
         if (userInfo == null) {
-            return false;
+            return Result.fail("用户名不存在");
         }
         if (password.equals(userInfo.getPassword())) {
             // 清空密码
             userInfo.setPassword("");
             session.setAttribute(Constants.SESSION_USER_KEY, userInfo);
-            return true;
+            return Result.success(true);
         }
-        return false;
+        return Result.fail("密码错误");
     }
 }

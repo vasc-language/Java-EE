@@ -1,14 +1,16 @@
 package org.example.jd20250417springbookdemo.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import lombok.extern.slf4j.Slf4j;
 import org.example.jd20250417springbookdemo.model.BookInfo;
+import org.example.jd20250417springbookdemo.model.PageRequest;
+import org.example.jd20250417springbookdemo.model.ResponseResult;
+import org.example.jd20250417springbookdemo.model.Result;
 import org.example.jd20250417springbookdemo.service.BookInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,61 +20,78 @@ import org.springframework.web.bind.annotation.RestController;
  * Time: 22:46
  */
 @Slf4j
-@RequestMapping("book")
+@RequestMapping("/book")
 @RestController
 public class BookInfoController {
     @Autowired
     private BookInfoService bookInfoService;
 
     @PostMapping(value = "/addBook", produces = "application/json")
-    public String addBook(@RequestBody BookInfo bookInfo) {
+    public Result addBook(@RequestBody BookInfo bookInfo) {
         log.info("添加图书，request: {}", bookInfo);
         /**
          * 1. 参数校验
          * 2. 存储数据
          * 3. 返回结果
          */
-//        if (!StringUtils.hasLength(bookInfo.getBookName())) {
-//            log.warn("添加图书，bookName 参数不合法，request: {}", bookInfo);
-//            return "bookName 参数不合法";
-//        }
-//        if (!StringUtils.hasLength(bookInfo.getAuthor())) {
-//            log.warn("添加图书，author 参数不合法，request: {}", bookInfo);
-//            return "author 参数不合法";
-//        }
-//        if (bookInfo.getCount() == null || bookInfo.getCount() <= 0) {
-//            log.warn("添加图书，count 参数不合法，request: {}", bookInfo);
-//            return "count 参数不合法";
-//        }
-////        if (!StringUtils.hasLength(bookInfo.getPrice())) {
-////            log.warn("添加图书，参数不合法，request: {}", bookInfo);
-////            return "price 参数不合法";
-////        }
-//        if (!StringUtils.hasLength(bookInfo.getPublish())) {
-//            log.warn("添加图书，参数不合法，request: {}", bookInfo);
-//            return "publish 参数不合法";
-//        }
-////        if (!StringUtils.hasLength(bookInfo.getStatus())) {
-////            log.warn("添加图书，参数不合法，request: {}", bookInfo);
-////            return "status 参数不合法";
-////        }
         if (!StringUtils.hasLength(bookInfo.getBookName())
                 || !StringUtils.hasLength(bookInfo.getAuthor())
                 || bookInfo.getCount() == null
                 || bookInfo.getPrice() == null
                 || !StringUtils.hasLength(bookInfo.getPublish())
-                || bookInfo.getStatus() == null){
+                || bookInfo.getStatus() == null) {
             log.warn("添加图书, 参数不合法, request: {}", bookInfo);
-            return "参数不合法";
+            
+            // 检查各个参数并提供具体错误信息
+            if (!StringUtils.hasLength(bookInfo.getBookName())) {
+                return Result.fail("书名不能为空");
+            }
+            if (!StringUtils.hasLength(bookInfo.getAuthor())) {
+                return Result.fail("作者不能为空");
+            }
+            if (bookInfo.getCount() == null) {
+                return Result.fail("数量不能为空");
+            }
+            if (bookInfo.getPrice() == null) {
+                return Result.fail("价格不能为空");
+            }
+            if (!StringUtils.hasLength(bookInfo.getPublish())) {
+                return Result.fail("出版社不能为空");
+            }
+            if (bookInfo.getStatus() == null) {
+                return Result.fail("状态不能为空");
+            }
+            
+            return Result.fail("参数不合法");
         }
-
         try {
-            // 存储数据
             bookInfoService.addBook(bookInfo);
-            return "添加图书成功";
+            return Result.success(bookInfo.getId());
         } catch (Exception e) {
-            log.error("添加图书异常，e: {}", e);
-            return "添加图书发生异常";
+            log.error("添加图书异常, e: {}", e);
+            return Result.fail("添加图书发生异常: " + e.getMessage());
         }
     }
+
+    // 返回一个页码的中所有的内容
+    @RequestMapping("/getListByPage")
+    public Result<ResponseResult<BookInfo>> getListByPage(PageRequest pageRequest){
+        ResponseResult<BookInfo> listByPage = bookInfoService.getListByPage(pageRequest);
+        return Result.success(listByPage);
+    }
+
+    // 更新修改图书
+    @RequestMapping("/updateBook")
+    public Result updateBook(BookInfo bookInfo) {
+        log.info("修改图书， bookInfo: {}", bookInfo);
+        try {
+            bookInfoService.updateBook(bookInfo);
+            // 成功
+            return Result.success("");
+        } catch (Exception e) {
+            log.error("修改图书发生异常，e: ", e);
+            return Result.fail("修改图书发生异常");
+        }
+    }
+
 }
