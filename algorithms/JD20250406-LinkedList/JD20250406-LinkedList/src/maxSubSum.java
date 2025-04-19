@@ -3,7 +3,7 @@ import java.util.*;
 class Solution2 {
     private int dp[];
 
-    public int maxSubSum(int a[]) {    //求最大连续子序列和
+    public int maxSubSum(int a[]) {    // 求最大连续子序列和
         int n = a.length;
         dp = new int[n];
         dp[0] = a[0];
@@ -23,7 +23,7 @@ class Solution2 {
      * @param a
      * @return
      */
-    public ArrayList<Integer> maxSub(int a[]) {    //求一个最大连续子序列
+    public ArrayList<Integer> maxSub(int a[]) {    // 求一个最大连续子序列
         int n = a.length;
         ArrayList<Integer> x = new ArrayList<>();
         int maxi = 0;
