@@ -24,9 +24,12 @@ public enum BookStatusEnum {
 
     public static BookStatusEnum getStatusByCode(Integer code) {
         switch (code) {
-            case 0: return BookStatusEnum.DELETE;
-            case 1: return  BookStatusEnum.NORMAL;
-            case 2: return BookStatusEnum.FORBIDDEN;
+            case 0:
+                return BookStatusEnum.DELETE;
+            case 1:
+                return BookStatusEnum.NORMAL;
+            case 2:
+                return BookStatusEnum.FORBIDDEN;
             default:
                 return null;
         }

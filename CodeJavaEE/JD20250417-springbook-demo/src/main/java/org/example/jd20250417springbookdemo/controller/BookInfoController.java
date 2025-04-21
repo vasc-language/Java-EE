@@ -2,7 +2,9 @@ package org.example.jd20250417springbookdemo.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.example.jd20250417springbookdemo.enums.BookStatusEnum;
 import org.example.jd20250417springbookdemo.model.BookInfo;
 import org.example.jd20250417springbookdemo.model.PageRequest;
 import org.example.jd20250417springbookdemo.model.ResponseResult;
@@ -11,6 +13,8 @@ import org.example.jd20250417springbookdemo.service.BookInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -80,18 +84,65 @@ public class BookInfoController {
         return Result.success(listByPage);
     }
 
+    // 查询图书信息
+//    public BookInfo queryBookById(Integer bookId) {
+//              log.info("查询图书信息，bookId: ", bookId);
+//              return bookInfoService.queryBookById(bookId);
+    @RequestMapping("/queryBookById")
+    public Result<BookInfo> queryBookById(@RequestParam Integer bookId) {
+        log.info("查询图书信息，bookId: {}", bookId);
+        BookInfo book = bookInfoService.queryBookById(bookId);
+        return Result.success(book);
+    }
+
     // 更新修改图书
-    @RequestMapping("/updateBook")
-    public Result updateBook(BookInfo bookInfo) {
+//    @RequestMapping("/updateBook")
+//    public Result updateBook(BookInfo bookInfo) {
+    @PostMapping("/updateBook")
+    public Result updateBook(@ModelAttribute BookInfo bookInfo) {
         log.info("修改图书， bookInfo: {}", bookInfo);
         try {
             bookInfoService.updateBook(bookInfo);
             // 成功
             return Result.success("");
         } catch (Exception e) {
-            log.error("修改图书发生异常，e: ", e);
+            log.error("修改图书发生异常，e: {}", e);
             return Result.fail("修改图书发生异常");
         }
     }
 
+    // 删除图书 -> 调用更新操作即可
+//    @PostMapping("/deleteBook")
+//    public Result deleteBook(@RequestParam Integer bookId) {
+    @PostMapping("/deleteBook")
+    public Result deleteBook(@RequestParam Integer bookId) {
+        log.info("删除图书，bookId: {}", bookId);
+
+        try {
+            // 修改 Id 和 status 状态码
+            BookInfo bookInfo = new BookInfo();
+            bookInfo.setId(bookId);
+            bookInfo.setStatus(BookStatusEnum.DELETE.getCode());
+            // 更新
+            bookInfoService.updateBook(bookInfo);
+            // 删除成功
+            return Result.success(""); // 成功返回，空字符串
+        } catch (Exception e) {
+            log.error("删除图书异常，e: {}", e);
+            return Result.fail("删除图书发生异常");
+        }
+    }
+
+    // 批量删除图书
+    @PostMapping("/batchDelete")
+    public Result batchDelete(@RequestParam("ids") List<Integer> ids) {
+        log.info("批量删除图书, ids:{}", ids);
+        try {
+            bookInfoService.batchDelete(ids);
+            return Result.success(true);
+        } catch (Exception e) {
+            log.error("批量删除图书失败, e:{}", e);
+            return Result.fail("批量删除图书失败");
+        }
+    }
 }

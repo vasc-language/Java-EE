@@ -37,15 +37,25 @@ public class BookInfoService {
         // 对结果进行二次处理 ——> 处理状态码
         // 0-删除 1-正常 2-不可借阅
         for (BookInfo bookInfo: bookInfos) {
+            // 前端展示时就能直接显示中文状态
             bookInfo.setStatusCN(BookStatusEnum.getStatusByCode(bookInfo.getStatus()).getDesc());
         }
+        // 返回分页结果对象
         return new ResponseResult<>(count, bookInfos, pageRequest);
+    }
+
+    // 返回更新后的数据
+    public BookInfo queryBookById(Integer bookId) {
+        return bookInfoMapper.QueryBookById(bookId);
     }
 
     // 更新修改图书
     public void updateBook(BookInfo bookInfo) {
         bookInfoMapper.updateBook(bookInfo);
     }
+
+    //  删除图书 -> 直接调用了 更新操作的方法
+
 
     // 批量删除图书
     public Integer batchDelete(List<Integer> ids) {

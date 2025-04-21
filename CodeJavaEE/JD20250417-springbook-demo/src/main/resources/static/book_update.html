@@ -59,10 +59,53 @@
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script>
+<!-- 在执行更新操作完之后,自然会有更新完之后的数据页面 -->
+        getBookInfo();
+        function getBookInfo() {
+            $.ajax({
+                type: "get",
+                url: "/book/queryBookById" + location.search,
+                success: function (result) {
+                    // 校验非常粗糙
+                    if (result.code == "SUCCESS" && result.data != null) {
+                        var bookInfo = result.data;
+                        if (bookInfo != null) {
+                            $("#bookId").val(bookInfo.id);
+                            $("#bookName").val(bookInfo.bookName);
+                            $("#bookAuthor").val(bookInfo.author);
+                            $("#bookStock").val(bookInfo.count);
+                            $("#bookPrice").val(bookInfo.price);
+                            $("#bookPublisher").val(bookInfo.publish);
+                            $("#bookStatus").val(bookInfo.status);
+                        }
+                    } else {
+                        console.log(result);
+                    }
+                },
+                error: function (error) {
+                    if (error.status == 401) {
+                        // 用户未登录
+                        location.href = "login.html";
+                    }
+                }
+            });
+        }
         
         function update() {
-            alert("更新成功");
-            location.href = "book_list.html"
+            $.ajax({
+                type: "post",
+                url: "/book/updateBook",
+                data: $("#updateBook").serialize(),
+                success: function (result) {
+                    if (result.code == "SUCCESS" && result.data == "") {
+                        location.href = "book_list.html?currentPage=1";
+                    } else {
+                        alert(result.errMsg);
+                    }
+                }
+            });
+            // alert("更新成功");
+            // location.href = "book_list.html"
         }
     </script>
 </body>

@@ -47,6 +47,13 @@
             <ul id="pageContainer" class="pagination justify-content-center"></ul>
         </div>
         <script>
+            /**
+             * location.search 是 JavaScript 中 window。location 对象的一个属性，
+             * 用于获取当前页面 URL 中（?）后面的查询字符串（包括问号本身）
+             * 作用：
+             * - 返回 URL 中从问号（?）开始到 URL 结尾的所有内容（包括 ?）
+             * - 如果 URL 没有查询参数，则返回空字符串 ""。
+             */
 
             getBookList();
             function getBookList() {
@@ -98,13 +105,21 @@
                             finalHtml += '</div></td></tr>';
                         }
                         $("#tbody").html(finalHtml); // 对 tbody 标签进行赋值操作
-
+                        /**
+                         * 跳转原理
+                         * - 当你点击“下一页”、“2”、“3” 等分页按钮时，jqPaginator 会触发 onPageChange 回调函数
+                         * - 回调函数的 page 参数就是你点击的目标页码（比如2、3等）
+                         * - type == "change" 表示是用户点击分页按钮触发的（而不是初始化）
+                         *
+                         * 这时会执行："location.href = book_list.html?currentPage=" + page
+                         * 这行代码会让浏览器跳转到新的 URL ，比如：book_list.html?currentPage=2
+                         */
                         //翻页信息
                         $("#pageContainer").jqPaginator({
-                            totalCounts: data.total, //总记录数
-                            pageSize: 10,    //每页的个数
-                            visiblePages: 5, //可视页数
-                            currentPage: data.pageRequest.currentPage,  //当前页码
+                            totalCounts: data.total, // 总记录数
+                            pageSize: 10,    // 每页的个数
+                            visiblePages: 5, // 可视页数
+                            currentPage: data.pageRequest.currentPage,  // 当前页码
                             first: '<li class="page-item"><a class="page-link">首页</a></li>',
                             prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页<\/a><\/li>',
                             next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页<\/a><\/li>',
@@ -134,7 +149,19 @@
                 var isDelete = confirm("确认删除?");
                 if (isDelete) {
                     //删除图书
-                    alert("删除成功");
+                    $.ajax({
+                        type: "post",
+                        url: "/book/deleteBook",
+                        data: { bookId: id },
+                        success: function (result) {
+                            if (result.code == "SUCCESS") {
+                                alert("删除成功");
+                                location.href = "book_list.html?currentPage=1";
+                            } else {
+                                alert(result.errMsg || "删除失败");
+                            }
+                        }
+                    });
                 }
             }
             function batchDelete() {
@@ -146,7 +173,24 @@
                         ids.push($(this).val());
                     });
                     console.log(ids);
-                    alert("批量删除成功");
+                    if (ids.length === 0) {
+                        alert("请至少选择一条记录进行删除");
+                        return;
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: "/book/batchDelete",
+                        data: { ids: ids },
+                        traditional: true,  // 这是关键，处理数组参数传递
+                        success: function (result) {
+                            if (result.code == "SUCCESS") {
+                                alert("批量删除成功");
+                                location.href = "book_list.html?currentPage=1";
+                            } else {
+                                alert(result.errMsg || "批量删除失败");
+                            }
+                        }
+                    });
                 }
             }
         </script>

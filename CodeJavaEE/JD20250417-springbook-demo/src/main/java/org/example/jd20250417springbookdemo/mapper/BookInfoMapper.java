@@ -38,6 +38,10 @@ public interface BookInfoMapper {
     @Select("SELECT COUNT(1) FROM book_info WHERE `status` <> 0")
     Integer count();
 
+    // 返回更新后的图书信息
+    @Select("SELECT * FROM book_info WHERE `status` != 0 AND id = #{bookId}")
+    BookInfo QueryBookById(Integer bookId);
+
     // 更新修改图书
     Integer updateBook(BookInfo bookInfo);
 
