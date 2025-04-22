@@ -1,0 +1,18 @@
+# spring.application.name=JE20250422-spring-book-demo
+spring:
+  application:
+    name: JE20250422-spring-book-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/book_test?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 212409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # \u9A7C\u5CF0\u81EA\u52A8\u8F6C\u6362
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # \u6253\u5370 SQL \u8BED\u53E5
+  mapper-locations: classpath:mapper/*.xml
+# \u8BBE\u7F6E\u65E5\u5FD7\u6587\u4EF6\u540D
+logging:
+  file:
+    name: spring-book.log
