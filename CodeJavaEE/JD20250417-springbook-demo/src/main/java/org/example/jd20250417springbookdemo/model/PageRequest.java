@@ -9,6 +9,13 @@ import lombok.Data;
  * Date: 2025-04-19
  * Time: 15:56
  */
+
+/**
+ * PageRequest 时分页请求的核心参数类。用于封装前端传递过来的分页参数
+ * - currentPage：当前请求的页码（如第1页、第2页）
+ * - pageSize：每页显示的记录数
+ * - offset：数据库查询的起始位置，计算公式为: (currentPage - 1) * pageSize
+ */
 @Data
 public class PageRequest {
     private Integer currentPage = 1; // 当前页面：1、2、3（因为只有30条数据）

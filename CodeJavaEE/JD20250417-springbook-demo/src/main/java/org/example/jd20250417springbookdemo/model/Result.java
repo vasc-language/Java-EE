@@ -8,15 +8,16 @@ package org.example.jd20250417springbookdemo.model;
  * Time: 16:17
  */
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+// import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.example.jd20250417springbookdemo.enums.ResultCodeEnum;
 
+// 统一API响应格式
 @Data
 public class Result<T> {
     private ResultCodeEnum code;  // -1 未登录    200 正常  -2 出错
-    private String errMsg;
-    private T data;
+    private String errMsg; // 错误信息
+    private T data; // 返回什么数据
 
     public static <T> Result success(T data) {
         Result result = new Result();

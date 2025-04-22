@@ -24,6 +24,12 @@ public interface BookInfoMapper {
             " (#{id}, #{bookName}, #{author}, #{count}, #{price}, #{publish}, #{status})")
     Integer addBook(BookInfo bookInfo);
 
+    /**
+     * MyBatis 的参数映射机制
+     * Mapper 接口方法只有一个非基本类型参数时，MyBatis 会把该对象当成一个“参数Map”来处理
+     * #{offset} 就对应调用 pageRequest.getOffset()
+     * #{pageSize} 对应调用 pageRequest.getPageSize()
+     */
 
     /** 处理分页情况
      * offset：起始页码

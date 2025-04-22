@@ -134,6 +134,8 @@ public class BookInfoController {
     }
 
     // 批量删除图书
+    // 使用集合进行传递，需要进行参数绑定
+    // 告诉 Spring：请从 URL 或表单里拿 ids 这批参数，按 Integer 列表的方式交给我 
     @PostMapping("/batchDelete")
     public Result batchDelete(@RequestParam("ids") List<Integer> ids) {
         log.info("批量删除图书, ids:{}", ids);

@@ -13,6 +13,19 @@ import java.util.List;
  * Date: 2025-04-19
  * Time: 18:40
  */
+
+/**
+ * ResponseResult 是分页结果的统一封装类，用于返回给前端完整的分页数据
+ * - total：满足条件的总记录数，用于计算总页数
+ * - records：当前页的数据记录列表
+ * - pageRequest：原始分页请求参数（currentPage、pageSize、offset）
+ *
+ * 在项目中的作用
+ * 1. 承载分页数据：包含了当前页的所有图书记录信息
+ * 2. 提供分页元信息：通过 total 和 pagePage 可以计算出总页数（30 / 10 = 3）
+ * 3. 前端分页组件使用：为 jqPaginator 等前端分页组件提供必要的数据
+ * @param <T>
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

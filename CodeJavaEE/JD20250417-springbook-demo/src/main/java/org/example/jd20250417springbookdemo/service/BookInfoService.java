@@ -28,6 +28,16 @@ public class BookInfoService {
     }
 
     // 处理分页情况
+
+    /**
+     * 整个分页功能的核心业务逻辑实现
+     * 1. 获取总记录数（count -> total）
+     * 2. 获取当前页面的数据（bookInfo -> records）
+     * 3. 对结果进行二次处理：(status -> statusCN) 使用枚举类型  BookStatusEnum (DELETE(0, "删除") code, desc)
+     * 4. 封装并返回分页结果
+     * @param pageRequest
+     * @return
+     */
     public ResponseResult<BookInfo> getListByPage(PageRequest pageRequest) {
         // 1. 获取页码总数
         // 2. 获取当前页面的数据
@@ -36,7 +46,7 @@ public class BookInfoService {
         List<BookInfo> bookInfos = bookInfoMapper.selectBooksByPage(pageRequest);
         // 对结果进行二次处理 ——> 处理状态码
         // 0-删除 1-正常 2-不可借阅
-        for (BookInfo bookInfo: bookInfos) {
+        for (BookInfo bookInfo : bookInfos) {
             // 前端展示时就能直接显示中文状态
             bookInfo.setStatusCN(BookStatusEnum.getStatusByCode(bookInfo.getStatus()).getDesc());
         }

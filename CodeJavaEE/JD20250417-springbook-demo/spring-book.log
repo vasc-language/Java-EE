@@ -1,225 +1,52 @@
-2025-04-21T19:08:38.767+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 4008 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T19:08:38.771+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T19:08:39.383+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T19:08:39.385+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T19:08:39.401+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T19:08:39.408+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T19:08:39.408+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T19:08:39.436+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T19:08:39.436+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
-2025-04-21T19:08:39.783+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T19:08:39.789+08:00  INFO 4008 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.312 seconds (process running for 1.73)
-2025-04-21T19:09:12.665+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T19:09:12.665+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T19:09:12.671+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2025-04-21T19:09:29.447+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T19:09:29.472+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T19:09:29.760+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@243f3fec
-2025-04-21T19:09:29.762+08:00  INFO 4008 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T19:29:08.140+08:00  INFO 4008 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T19:29:08.363+08:00  INFO 4008 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T19:29:08.368+08:00  INFO 4008 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T19:29:08.368+08:00  INFO 4008 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T19:29:11.800+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 11700 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T19:29:11.801+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T19:29:12.314+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T19:29:12.315+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T19:29:12.319+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T19:29:12.327+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T19:29:12.328+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T19:29:12.360+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T19:29:12.360+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 536 ms
-2025-04-21T19:29:12.670+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T19:29:12.676+08:00  INFO 11700 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.127 seconds (process running for 1.399)
-2025-04-21T19:29:16.124+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T19:29:16.124+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T19:29:16.125+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-21T19:29:16.145+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.BookInfoController      : 删除图书，bookId: 20
-2025-04-21T19:29:16.189+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T19:29:16.277+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7988974b
-2025-04-21T19:29:16.278+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T19:30:45.721+08:00  INFO 11700 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.controller.BookInfoController      : 删除图书，bookId: 22
-2025-04-21T19:51:01.606+08:00  INFO 11700 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T19:51:01.694+08:00  INFO 11700 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T19:51:01.696+08:00  INFO 11700 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T19:51:01.700+08:00  INFO 11700 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T19:51:04.128+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 17504 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T19:51:04.130+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T19:51:04.592+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T19:51:04.594+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T19:51:04.596+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T19:51:04.602+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T19:51:04.602+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T19:51:04.639+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T19:51:04.639+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 487 ms
-2025-04-21T19:51:04.955+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T19:51:04.961+08:00  INFO 17504 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.091 seconds (process running for 1.346)
-2025-04-21T19:51:08.129+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T19:51:08.129+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T19:51:08.130+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-21T19:51:23.798+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 
-2025-04-21T19:51:23.827+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T19:51:24.042+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27a3b17e
-2025-04-21T19:51:24.046+08:00  INFO 17504 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T20:19:32.022+08:00  INFO 17504 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T20:19:32.110+08:00  INFO 17504 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T20:19:32.114+08:00  INFO 17504 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T20:19:32.119+08:00  INFO 17504 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T20:19:33.545+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 8468 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T20:19:33.547+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T20:19:34.035+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T20:19:34.037+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T20:19:34.040+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T20:19:34.048+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T20:19:34.048+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T20:19:34.090+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T20:19:34.091+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
-2025-04-21T20:19:34.394+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T20:19:34.400+08:00  INFO 8468 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.106 seconds (process running for 1.379)
-2025-04-21T20:19:43.489+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T20:19:43.489+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T20:19:43.489+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-04-21T20:19:43.601+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T20:19:43.627+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T20:19:43.868+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a31ec72
-2025-04-21T20:19:43.871+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T20:20:05.026+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 
-2025-04-21T20:20:19.586+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=null, bookName=人类简史, author=尤瓦尔·赫拉利, count=50, price=80, publish=中信出版社, status=1, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:20:39.761+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 
-2025-04-21T20:20:51.103+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=null, bookName=人类简史, author=尤瓦尔·赫拉利, count=50, price=55, publish=中信出版社, status=2, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:31:20.540+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=24, bookName=墨菲定律, author=亚瑟·布洛赫, count=null, price=null, publish=null, status=null, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:31:23.154+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=24, bookName=墨菲定律, author=亚瑟·布洛赫, count=null, price=null, publish=null, status=null, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:31:24.106+08:00  INFO 8468 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=24, bookName=墨菲定律, author=亚瑟·布洛赫, count=null, price=null, publish=null, status=null, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:31:38.994+08:00  INFO 8468 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T20:31:39.205+08:00  INFO 8468 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T20:31:39.205+08:00  INFO 8468 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T20:31:39.220+08:00  INFO 8468 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T20:31:41.176+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 14836 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T20:31:41.176+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T20:31:41.639+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T20:31:41.639+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T20:31:41.655+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T20:31:41.655+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T20:31:41.655+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T20:31:41.671+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T20:31:41.671+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 476 ms
-2025-04-21T20:31:41.980+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T20:31:41.985+08:00  INFO 14836 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.063 seconds (process running for 1.309)
-2025-04-21T20:31:56.314+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T20:31:56.314+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T20:31:56.330+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2025-04-21T20:31:56.395+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=24, bookName=墨菲定律, author=亚瑟·布洛赫, count=null, price=null, publish=null, status=null, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:31:56.509+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T20:31:56.714+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26d524ad
-2025-04-21T20:31:56.714+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T20:32:24.404+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.controller.BookInfoController      : 删除图书，bookId: 24
-2025-04-21T20:33:25.335+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T20:33:30.501+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 
-2025-04-21T20:33:43.745+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=null, bookName=人类简史, author=尤瓦尔·赫拉利, count=50, price=69, publish=中信出版社, status=1, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:34:04.209+08:00  INFO 14836 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.controller.BookInfoController      : 添加图书，request: BookInfo(id=null, bookName=人类简史, author=尤瓦尔·赫拉利, count=12, price=31, publish=中信出版社, status=1, statusCN=null, createTime=null, updateTime=null)
-2025-04-21T20:57:36.271+08:00  INFO 14836 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T20:57:36.366+08:00  INFO 14836 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T20:57:36.368+08:00  INFO 14836 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T20:57:36.372+08:00  INFO 14836 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T20:57:38.926+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 6484 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T20:57:38.928+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T20:57:39.440+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T20:57:39.441+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T20:57:39.444+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T20:57:39.452+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T20:57:39.452+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T20:57:39.480+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T20:57:39.480+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 529 ms
-2025-04-21T20:57:39.789+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T20:57:39.794+08:00  INFO 6484 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.156 seconds (process running for 1.439)
-2025-04-21T21:00:19.296+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T21:00:19.296+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T21:00:19.298+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-04-21T21:00:19.392+08:00  WARN 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'ids': Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; For input string: "15，16，17，18，19，20"]
-2025-04-21T21:01:55.659+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.BookInfoController      : 批量删除图书, ids:[15, 16, 17, 18]
-2025-04-21T21:01:55.740+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T21:01:55.968+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5367384a
-2025-04-21T21:01:55.971+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T21:03:21.374+08:00  INFO 6484 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T21:07:27.179+08:00  INFO 6484 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T21:07:27.268+08:00  INFO 6484 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T21:07:27.270+08:00  INFO 6484 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T21:07:27.273+08:00  INFO 6484 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T21:07:28.642+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 17580 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T21:07:28.643+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T21:07:29.092+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T21:07:29.093+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T21:07:29.095+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T21:07:29.106+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T21:07:29.106+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T21:07:29.138+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T21:07:29.138+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 473 ms
-2025-04-21T21:07:29.439+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T21:07:29.445+08:00  INFO 17580 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.06 seconds (process running for 1.328)
-2025-04-21T21:07:32.891+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T21:07:32.892+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T21:07:32.892+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-04-21T21:07:32.955+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T21:07:33.058+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59115a6d
-2025-04-21T21:07:33.059+08:00  INFO 17580 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T21:08:18.363+08:00  INFO 17580 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T21:08:18.445+08:00  INFO 17580 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T21:08:18.448+08:00  INFO 17580 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T21:08:18.451+08:00  INFO 17580 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T21:08:19.857+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 14496 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T21:08:19.858+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T21:08:20.322+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T21:08:20.324+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T21:08:20.327+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T21:08:20.332+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T21:08:20.333+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T21:08:20.364+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T21:08:20.364+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 483 ms
-2025-04-21T21:08:20.681+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T21:08:20.687+08:00  INFO 14496 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.096 seconds (process running for 1.366)
-2025-04-21T21:08:25.801+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T21:08:25.801+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T21:08:25.802+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-04-21T21:08:25.865+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T21:08:25.976+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31c3ec7f
-2025-04-21T21:08:25.977+08:00  INFO 14496 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T21:19:37.826+08:00  INFO 14496 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T21:19:38.062+08:00  INFO 14496 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T21:19:38.072+08:00  INFO 14496 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T21:19:38.078+08:00  INFO 14496 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T21:19:41.171+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 18332 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T21:19:41.173+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T21:19:41.661+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T21:19:41.663+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T21:19:41.666+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T21:19:41.674+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T21:19:41.674+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T21:19:41.710+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T21:19:41.711+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 516 ms
-2025-04-21T21:19:42.016+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T21:19:42.022+08:00  INFO 18332 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.112 seconds (process running for 1.392)
-2025-04-21T21:19:58.190+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T21:19:58.191+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T21:19:58.193+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-04-21T21:19:58.307+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T21:19:58.330+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T21:19:58.571+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66530180
-2025-04-21T21:19:58.575+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T21:20:07.993+08:00  INFO 18332 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.controller.BookInfoController      : 批量删除图书, ids:[29, 30]
-2025-04-21T21:46:58.415+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 472 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by Ҧ���� in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T21:46:58.420+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T21:46:59.046+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T21:46:59.046+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T21:46:59.046+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T21:46:59.063+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T21:46:59.063+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T21:46:59.105+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T21:46:59.105+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
-2025-04-21T21:46:59.530+08:00  WARN 472 --- [JD20250417-springbook-demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-04-21T21:46:59.561+08:00  INFO 472 --- [JD20250417-springbook-demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-04-22T07:43:59.611+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 6572 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-22T07:43:59.615+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-22T07:44:00.319+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-22T07:44:00.321+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-22T07:44:00.336+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-22T07:44:00.344+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-22T07:44:00.344+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-22T07:44:00.370+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-22T07:44:00.370+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 729 ms
+2025-04-22T07:44:00.757+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-22T07:44:00.764+08:00  INFO 6572 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.456 seconds (process running for 2.002)
+2025-04-22T07:44:10.429+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-22T07:44:10.429+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-22T07:44:10.429+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-22T07:44:12.595+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.UserInfoController      : username: admin
+2025-04-22T07:44:12.629+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-22T07:44:12.909+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fd39d6c
+2025-04-22T07:44:12.911+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-22T07:44:22.983+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 删除图书，bookId: 23
+2025-04-22T07:44:31.470+08:00  INFO 6572 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.controller.BookInfoController      : 删除图书，bookId: 25
+2025-04-22T07:44:43.171+08:00  INFO 6572 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-22T07:44:43.355+08:00  INFO 6572 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-22T07:44:43.357+08:00  INFO 6572 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-22T07:44:43.358+08:00  INFO 6572 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-22T20:08:13.971+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 17192 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-22T20:08:13.973+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-22T20:08:14.599+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-22T20:08:14.601+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-22T20:08:14.617+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-22T20:08:14.625+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-22T20:08:14.625+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-22T20:08:14.657+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-22T20:08:14.658+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 660 ms
+2025-04-22T20:08:15.017+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-22T20:08:15.023+08:00  INFO 17192 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.328 seconds (process running for 1.771)
+2025-04-22T20:15:30.358+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 17040 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by Ҧ���� in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-22T20:15:30.361+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-22T20:15:31.073+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-22T20:15:31.075+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-22T20:15:31.078+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-22T20:15:31.086+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-22T20:15:31.087+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-22T20:15:31.137+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-22T20:15:31.138+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 747 ms
+2025-04-22T20:15:31.876+08:00  WARN 17040 --- [JD20250417-springbook-demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-04-22T20:15:31.927+08:00  INFO 17040 --- [JD20250417-springbook-demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-04-21T21:46:59.574+08:00 ERROR 472 --- [JD20250417-springbook-demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2025-04-22T20:15:31.952+08:00 ERROR 17040 --- [JD20250417-springbook-demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -233,27 +60,3 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
-2025-04-21T21:47:04.024+08:00  INFO 18332 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-21T21:47:04.110+08:00  INFO 18332 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-21T21:47:04.110+08:00  INFO 18332 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-21T21:47:04.119+08:00  INFO 18332 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-21T21:47:08.695+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 19848 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by Ҧ���� in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-21T21:47:08.698+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-21T21:47:09.330+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-21T21:47:09.332+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-21T21:47:09.335+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-21T21:47:09.344+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-21T21:47:09.345+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-21T21:47:09.386+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-21T21:47:09.387+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 659 ms
-2025-04-21T21:47:09.812+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-21T21:47:09.818+08:00  INFO 19848 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.434 seconds (process running for 1.787)
-2025-04-21T21:47:15.780+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-21T21:47:15.780+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-21T21:47:15.780+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-04-21T21:47:15.864+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-21T21:47:15.994+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61199f64
-2025-04-21T21:47:15.996+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-21T21:47:36.582+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.UserInfoController      : username: admin
-2025-04-21T21:47:46.025+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.controller.BookInfoController      : ��ѯͼ����Ϣ��bookId: 13
-2025-04-21T21:48:13.323+08:00  INFO 19848 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.BookInfoController      : �޸�ͼ�飬 bookInfo: BookInfo(id=13, bookName=hahah, author=����2, count=20, price=24.5, publish=������1, status=2, statusCN=null, createTime=null, updateTime=null)
