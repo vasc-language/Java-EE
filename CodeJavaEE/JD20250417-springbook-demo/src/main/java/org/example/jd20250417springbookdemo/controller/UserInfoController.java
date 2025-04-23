@@ -54,6 +54,7 @@ public class UserInfoController {
         if (password.equals(userInfo.getPassword())) {
             // 清空密码
             userInfo.setPassword("");
+            // userInfo 信息 用 Constants 中的 SESSION_USER_KEY 保存起来
             session.setAttribute(Constants.SESSION_USER_KEY, userInfo);
             return Result.success(true);
         }
