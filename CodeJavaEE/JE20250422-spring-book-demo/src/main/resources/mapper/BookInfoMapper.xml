@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.book.je20250422springbookdemo.mapper.BookInfoMapper">
+<!-- 更新图书操作 -->
+    <update id="updateBooks">
+        UPDATE book_info
+        <set>
+            <if test="bookName!=null">
+                book_name = #{bookName},
+            </if>
+            <if test="author!=null">
+                author = #{author},
+            </if>
+            <if test="count!=null">
+                count = #{count},
+            </if>
+            <if test="price!=null">
+                price = #{price},
+            </if>
+            <if test="publish!=null">
+                publish = #{publish},
+            </if>
+            <if test="status!=null">
+                status = #{status}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+<!--  批量删除操作，将 status = 0 即可，从而实现逻辑上的删除 -->
+    <delete id="batchDelete">
+        UPDATE book_info set status = 0 WHERE id IN
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

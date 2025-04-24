@@ -15,15 +15,11 @@ public class Result<T> {
     private ResultCodeEnum code; // -1 未登录 200 正常成功 -2 出错
     private String errMsg; // 报错信息
     private T data; // 响应后返回什么样的数据
-    
-//    // 添加code字段，便于前端获取状态码
-//    private String code;
 
     // 成功的结果
     public static <T> Result success(T data) {
         Result result = new Result();
         result.setCode(ResultCodeEnum.SUCCESS);
-        // result.setCode("SUCCESS");
         result.setErrMsg("");
         result.setData(data);
         return result;
@@ -33,7 +29,6 @@ public class Result<T> {
     public static <T> Result fail(String errMsg) {
         Result result = new Result();
         result.setCode(ResultCodeEnum.FAIL);
-        // result.setCode("FAIL");
         result.setErrMsg(errMsg);
         result.setData(null);
         return result;
@@ -43,7 +38,6 @@ public class Result<T> {
     public static <T> Result fail(String errMsg, T data) {
         Result result = new Result();
         result.setCode(ResultCodeEnum.FAIL);
-        // result.setCode("FAIL");
         result.setErrMsg(errMsg);
         result.setData(data);
         return result;
@@ -53,7 +47,6 @@ public class Result<T> {
     public static <T> Result unLogin() {
         Result result = new Result();
         result.setCode(ResultCodeEnum.UNLOGIN);
-        // result.setCode("UNLOGIN");
         result.setErrMsg("用户未登录");
         return result;
     }

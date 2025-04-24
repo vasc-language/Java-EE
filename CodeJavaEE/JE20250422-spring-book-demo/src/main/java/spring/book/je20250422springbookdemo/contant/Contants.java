@@ -8,5 +8,5 @@ package spring.book.je20250422springbookdemo.contant;
  * Time: 22:14
  */
 public class Contants {
-    public static final String SESSION_USER_KEY = "session_user_key";
+    public static final String SESSION_USER_KEY = "session_user_key"; // 将登录用户信息 存储在 SESSION_USER_KEY 中
 }
