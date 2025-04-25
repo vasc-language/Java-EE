@@ -1,0 +1,15 @@
+#spring.application.name=JE20250425-mybatis-plus-demo
+spring:
+  application:
+    name: JE20250425-mybatis-plus-demo
+  # ???????
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_test?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 212409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration: #
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: "classpath*:/mapper/**.xml" # Mapper.xml
+
