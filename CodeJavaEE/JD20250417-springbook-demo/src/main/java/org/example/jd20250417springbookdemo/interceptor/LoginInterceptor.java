@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
 import org.example.jd20250417springbookdemo.contant.Constants;
 import org.example.jd20250417springbookdemo.model.UserInfo;
 import org.springframework.stereotype.Component;

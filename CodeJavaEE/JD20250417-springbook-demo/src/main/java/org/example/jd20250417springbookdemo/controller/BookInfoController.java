@@ -1,8 +1,5 @@
 package org.example.jd20250417springbookdemo.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.example.jd20250417springbookdemo.enums.BookStatusEnum;
 import org.example.jd20250417springbookdemo.model.BookInfo;

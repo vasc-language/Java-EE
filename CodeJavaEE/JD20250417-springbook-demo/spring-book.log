@@ -1,24 +1,1172 @@
-2025-04-23T18:38:10.092+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 8112 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
-2025-04-23T18:38:10.096+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2025-04-23T18:38:10.755+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-23T18:38:10.757+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-04-23T18:38:10.771+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-23T18:38:10.777+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-23T18:38:10.778+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-23T18:38:10.802+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-23T18:38:10.803+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
-2025-04-23T18:38:11.135+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-23T18:38:11.140+08:00  INFO 8112 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.347 seconds (process running for 1.773)
-2025-04-23T18:38:33.075+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-23T18:38:33.075+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-23T18:38:33.076+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-23T18:38:33.122+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
-2025-04-23T18:38:33.123+08:00  WARN 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户未登录
-2025-04-23T18:39:42.265+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.controller.UserInfoController      : username: zhangsan
-2025-04-23T18:39:42.278+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-23T18:39:42.400+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5eb9fc26
-2025-04-23T18:39:42.401+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-23T18:39:47.085+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
-2025-04-23T18:39:47.086+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
-2025-04-23T18:39:47.155+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
-2025-04-23T18:39:47.156+08:00  INFO 8112 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:06:02.727+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 3952 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T15:06:02.731+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T15:06:03.462+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T15:06:03.465+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T15:06:03.480+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T15:06:03.488+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T15:06:03.488+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T15:06:03.518+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T15:06:03.518+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 761 ms
+2025-04-25T15:06:03.913+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T15:06:03.918+08:00  INFO 3952 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.5 seconds (process running for 1.941)
+2025-04-25T15:07:53.811+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T15:07:53.811+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T15:07:53.827+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-25T15:07:58.482+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.controller.UserInfoController      : username: admin
+2025-04-25T15:07:58.508+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T15:07:58.773+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@435aac17
+2025-04-25T15:07:58.775+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T15:07:58.957+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:07:58.957+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:07:59.016+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:07:59.016+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:21.334+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:21.334+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:21.334+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:25.194+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:25.194+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:25.194+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:30.216+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:30.223+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:30.228+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:44.798+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:44.798+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:44.825+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:44.826+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:47.899+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:47.899+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:47.924+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:47.924+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:48.706+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:48.708+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:48.728+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:48.728+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:48.876+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:48.877+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:48.890+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:48.890+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.065+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.066+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.079+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.079+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.228+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.228+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.242+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.242+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.382+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.382+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.395+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.395+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.539+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.539+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.552+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.552+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.691+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.692+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.705+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.705+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.842+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:49.842+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:49.854+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:49.855+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:49.999+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.000+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.011+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.011+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:50.166+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.167+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.178+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.178+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:50.363+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.364+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.374+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.375+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:50.509+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.509+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.520+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.520+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:50.685+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.685+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.698+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.698+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:50.848+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:50.848+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:50.862+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:50.862+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:51.937+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:51.938+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:51.948+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:51.948+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:53.332+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:53.332+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:53.342+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:53.342+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:08:53.481+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:08:53.481+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:08:53.491+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:08:53.492+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:03.182+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:03.183+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:03.190+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:03.191+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:04.040+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:04.040+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:04.049+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:04.049+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:04.587+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:04.587+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:04.598+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:04.598+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:05.124+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:05.124+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:05.131+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:05.132+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:05.468+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:05.468+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:05.475+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:05.476+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:05.640+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:05.641+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:05.650+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:05.651+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:05.799+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:05.799+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:05.807+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:05.808+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:05.967+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:05.967+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:05.979+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:05.979+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:06.133+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:06.133+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:06.141+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:06.141+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:06.307+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:06.307+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:06.313+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:06.313+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:06.564+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:06.564+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:06.571+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:06.572+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:09.017+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:09.017+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:09.029+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:09:09.029+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:31.692+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:31.693+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:31.702+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:40.231+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:40.231+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:40.233+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:09:42.615+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:09:42.615+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:09:42.615+08:00  INFO 3952 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:02.725+08:00  INFO 3952 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T15:11:02.816+08:00  INFO 3952 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T15:11:02.818+08:00  INFO 3952 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T15:11:02.820+08:00  INFO 3952 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-25T15:11:05.009+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 2592 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T15:11:05.010+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T15:11:05.530+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T15:11:05.532+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T15:11:05.534+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T15:11:05.540+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T15:11:05.540+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T15:11:05.565+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T15:11:05.565+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2025-04-25T15:11:05.879+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T15:11:05.884+08:00  INFO 2592 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.133 seconds (process running for 1.415)
+2025-04-25T15:11:12.368+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T15:11:12.369+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T15:11:12.369+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-25T15:11:14.346+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:14.346+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户未登录
+2025-04-25T15:11:15.576+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.controller.UserInfoController      : username: admin
+2025-04-25T15:11:15.586+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T15:11:15.666+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6532d0d7
+2025-04-25T15:11:15.667+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T15:11:15.762+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:15.762+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:15.786+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:11:15.786+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:22.679+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:22.679+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:22.707+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:11:22.708+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:30.488+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:30.489+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:30.495+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:37.054+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:37.055+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:37.059+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:48.543+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:48.543+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:48.545+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:50.761+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:50.761+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:50.778+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:11:50.779+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:11:58.065+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:11:58.071+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:11:58.078+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:12:02.766+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:12:02.766+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:12:02.769+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:12:04.564+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:12:04.565+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:12:04.566+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:12:06.698+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:12:06.698+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:12:06.699+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:12:50.647+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:12:50.647+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:12:50.647+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:12:56.870+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:12:56.870+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:12:56.873+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:13:01.114+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:05.349+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:05.914+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.086+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.251+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.439+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.619+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.790+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:06.931+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:07.105+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:13:29.723+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.controller.UserInfoController      : username: zhangsan
+2025-04-25T15:14:00.108+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:14:00.108+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:14:00.133+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.controller.BookInfoController      : 添加图书，request: BookInfo(id=null, bookName=百年孤独, author=加西亚·马尔克斯, count=12, price=99.00, publish=南海出版公司, status=1, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T15:14:00.148+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:14:00.148+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:14:46.062+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:14:46.062+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:14:46.067+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:14:46.067+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:15:11.702+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:15:11.702+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:15:11.703+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.controller.BookInfoController      : 添加图书，request: BookInfo(id=null, bookName=百年孤独, author=加西亚·马尔克斯, count=12, price=100.1, publish=南海出版公司, status=1, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T15:15:11.709+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:15:11.709+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:15:14.389+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:15:14.389+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:15:14.395+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:15:14.395+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:15:53.142+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:15:53.142+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:15:53.144+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:16:02.113+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:16:02.113+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:16:02.116+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=109, bookName=墨菲定律24, author=亚瑟·布洛赫24, count=null, price=null, publish=null, status=null, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T15:16:02.197+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:16:02.197+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:16:09.214+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:16:09.214+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:16:09.220+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:16:09.220+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:16:23.804+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:16:23.805+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:16:23.807+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:16:28.438+08:00  WARN 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-25T15:16:42.741+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:16:42.742+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:16:42.744+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.controller.BookInfoController      : 删除图书，bookId: 109
+2025-04-25T15:16:42.751+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:16:42.751+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:16:52.316+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:16:52.316+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:16:52.332+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:16:52.332+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:17:01.459+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:17:01.460+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:17:01.460+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 10
+2025-04-25T15:17:01.462+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:17:01.462+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:17:35.768+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:17:35.768+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:17:35.774+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:17:35.774+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:17:38.349+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:17:38.349+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:17:38.356+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:17:38.356+08:00  INFO 2592 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:17:43.213+08:00  INFO 2592 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T15:17:43.304+08:00  INFO 2592 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T15:17:43.306+08:00  INFO 2592 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T15:17:43.311+08:00  INFO 2592 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-25T15:17:44.684+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 14868 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T15:17:44.686+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T15:17:45.195+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T15:17:45.197+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T15:17:45.201+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T15:17:45.208+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T15:17:45.208+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T15:17:45.232+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T15:17:45.232+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 523 ms
+2025-04-25T15:17:45.539+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T15:17:45.544+08:00  INFO 14868 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.162 seconds (process running for 1.431)
+2025-04-25T15:19:03.857+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T15:19:03.857+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T15:19:03.864+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-04-25T15:19:04.023+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:19:04.023+08:00  WARN 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户未登录
+2025-04-25T15:19:07.338+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.controller.UserInfoController      : username: admin
+2025-04-25T15:19:07.363+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T15:19:07.551+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40eaa893
+2025-04-25T15:19:07.553+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T15:19:07.748+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:19:07.748+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:19:07.793+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:19:07.793+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:19:19.635+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:19:19.637+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:19:19.639+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:20:41.964+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:20:41.964+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:20:41.968+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:20:44.313+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:20:44.314+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:20:44.315+08:00  INFO 14868 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:43:38.134+08:00  INFO 14868 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T15:43:38.220+08:00  INFO 14868 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T15:43:38.222+08:00  INFO 14868 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T15:43:38.226+08:00  INFO 14868 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-25T15:43:40.604+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 8288 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T15:43:40.605+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T15:43:41.105+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T15:43:41.106+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T15:43:41.109+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T15:43:41.120+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T15:43:41.121+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T15:43:41.146+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T15:43:41.146+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 520 ms
+2025-04-25T15:43:41.447+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T15:43:41.452+08:00  INFO 8288 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.096 seconds (process running for 1.352)
+2025-04-25T15:43:57.944+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T15:43:57.945+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T15:43:57.946+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-25T15:44:24.342+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:44:26.849+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.controller.UserInfoController      : username: admin
+2025-04-25T15:44:26.858+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T15:44:26.941+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2de1875e
+2025-04-25T15:44:26.942+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T15:44:27.070+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:44:27.070+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:44:27.090+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:44:27.091+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:44:27.198+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:44:33.163+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:00.699+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:00.699+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:00.717+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.controller.BookInfoController      : 添加图书，request: BookInfo(id=null, bookName=三体, author=刘慈欣, count=50, price=100, publish=中信出版社, status=1, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T15:45:00.724+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:00.724+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:00.766+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:00.766+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:00.776+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:00.776+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:00.863+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:04.209+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:04.209+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:04.215+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:04.216+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:04.298+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:06.526+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:06.527+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:06.532+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:06.532+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:06.610+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:21.507+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:21.507+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:21.512+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:21.513+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:21.600+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:31.581+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:31.582+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:31.583+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 批量删除图书, ids:[12, 13, 14, 19, 26, 27]
+2025-04-25T15:45:31.608+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:31.608+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:32.430+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:32.430+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:32.435+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:32.435+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:32.523+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T15:45:36.480+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T15:45:36.480+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T15:45:36.485+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T15:45:36.485+08:00  INFO 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T15:45:36.564+08:00 ERROR 8288 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:00:00.607+08:00  INFO 8288 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T16:00:00.695+08:00  INFO 8288 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T16:00:00.697+08:00  INFO 8288 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T16:00:00.700+08:00  INFO 8288 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-25T16:00:03.693+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 3908 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T16:00:03.695+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T16:00:04.222+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T16:00:04.224+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T16:00:04.230+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T16:00:04.237+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T16:00:04.238+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T16:00:04.261+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T16:00:04.261+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 543 ms
+2025-04-25T16:00:04.572+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T16:00:04.578+08:00  INFO 3908 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.131 seconds (process running for 1.391)
+2025-04-25T16:00:16.808+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T16:00:16.808+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T16:00:16.809+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-25T16:00:16.823+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:00:16.823+08:00  WARN 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户未登录
+2025-04-25T16:00:20.334+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.controller.UserInfoController      : username: zhangsan
+2025-04-25T16:00:20.343+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T16:00:20.427+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e861100
+2025-04-25T16:00:20.429+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T16:00:23.239+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:00:23.239+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:00:23.290+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 添加图书，request: BookInfo(id=null, bookName=百年孤独, author=加西亚·马尔克斯, count=12, price=100.1, publish=南海出版公司, status=1, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T16:00:23.303+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:00:23.303+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:00:28.889+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:00:28.889+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:00:28.909+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:00:28.910+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:00:40.454+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:00:40.455+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:00:40.486+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:00:40.486+08:00  INFO 3908 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:14.991+08:00  INFO 3908 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T16:05:15.080+08:00  INFO 3908 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T16:05:15.081+08:00  INFO 3908 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T16:05:15.086+08:00  INFO 3908 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-25T16:05:17.842+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Starting Jd20250417SpringbookDemoApplication using Java 17 with PID 19292 (D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo\target\classes started by 姚东名 in D:\Github\Java-EE\CodeJavaEE\JD20250417-springbook-demo)
+2025-04-25T16:05:17.843+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-25T16:05:18.391+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-25T16:05:18.393+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-04-25T16:05:18.396+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-04-25T16:05:18.404+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-25T16:05:18.404+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-25T16:05:18.436+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-25T16:05:18.436+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 573 ms
+2025-04-25T16:05:18.778+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-25T16:05:18.784+08:00  INFO 19292 --- [JD20250417-springbook-demo] [main] .e.j.Jd20250417SpringbookDemoApplication : Started Jd20250417SpringbookDemoApplication in 1.212 seconds (process running for 1.534)
+2025-04-25T16:05:25.171+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-25T16:05:25.171+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-25T16:05:25.172+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-25T16:05:25.238+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:25.239+08:00  WARN 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户未登录
+2025-04-25T16:05:26.671+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:05:27.716+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.UserInfoController      : username: admin
+2025-04-25T16:05:27.726+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-25T16:05:27.811+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73c1fdeb
+2025-04-25T16:05:27.812+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-25T16:05:27.898+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:27.898+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:27.924+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:27.925+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:27.996+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:05:30.134+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:30.134+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:30.156+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:30.157+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-9] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:30.226+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-10] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:05:32.559+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:32.559+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:32.561+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.controller.BookInfoController      : 查询图书信息，bookId: 111
+2025-04-25T16:05:32.567+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:32.567+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-2] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:32.654+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-3] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:05:37.214+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:37.214+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:37.219+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.controller.BookInfoController      : 修改图书， bookInfo: BookInfo(id=111, bookName=百年孤独11, author=加西亚·马尔克斯, count=12, price=100.1, publish=南海出版公司, status=1, statusCN=null, createTime=null, updateTime=null)
+2025-04-25T16:05:37.297+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:37.297+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-4] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:37.341+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:37.341+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:37.361+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:37.361+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-5] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:37.438+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-6] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T16:05:39.217+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : preHandle 目标方法执行前~
+2025-04-25T16:05:39.217+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 用户已登录
+2025-04-25T16:05:39.235+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : postHandle 目标方法执行后~
+2025-04-25T16:05:39.235+08:00  INFO 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-8] o.e.j.interceptor.LoginInterceptor       : 视图 view 渲染完成~
+2025-04-25T16:05:39.310+08:00 ERROR 19292 --- [JD20250417-springbook-demo] [http-nio-8080-exec-7] o.e.j.config.ExceptionAdvice             : 发生内部异常，e: 
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.5.jar:6.2.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.39.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.5.jar:6.2.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-04-25T17:26:09.096+08:00  INFO 19292 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-25T17:26:09.178+08:00  INFO 19292 --- [JD20250417-springbook-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-25T17:26:09.182+08:00  INFO 19292 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-25T17:26:09.184+08:00  INFO 19292 --- [JD20250417-springbook-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
