@@ -14,10 +14,10 @@ class Solution1 {
     int n;
     boolean[] flag; // 标记选择的活动
 
-    void greedly() {                        // 贪心算法
+    void greedly() { // 贪心算法
         flag = new boolean[n];
-        Arrays.fill(flag, false);          // 初始化为false
-        Arrays.sort(A, new Comparator<Action>() {    // 按e递增排序
+        Arrays.fill(flag, false); // 初始化为false
+        Arrays.sort(A, new Comparator<Action>() { // 按e递增排序
             @Override
             public int compare(Action o1, Action o2) {
                 return o1.e - o2.e;
