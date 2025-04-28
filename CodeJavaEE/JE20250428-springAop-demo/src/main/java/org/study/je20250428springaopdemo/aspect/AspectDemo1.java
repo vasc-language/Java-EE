@@ -20,12 +20,11 @@ import org.springframework.stereotype.Component;
 public class AspectDemo1 {
     /**
      * 通知类型
-     * @Around：环绕通知，这是功能最强大的通知类型。
-     *          它可以在目标方法执之前和之后都执行自定义逻辑。他甚至可以决定是否执行目标方法，或者修改目标方法的返回值
-     * @Before：
-     * @After：
-     * @AfterReturning：
-     * @AfterThrowing：
+     * @Around：环绕通知，这是功能最强大的通知类型。它可以在目标方法执之前和之后都执行自定义逻辑。他甚至可以决定是否执行目标方法，或者修改目标方法的返回值
+     * @Before：前置通知，此注解标注的通知方法在目标方法前被执行
+     * @After：后置通知，此注解标注的通知方法在目标方法后被执行
+     * @AfterReturning：返回后通知，此注解的通知方法在目标方法后被执行，有异常不会被执行
+     * @AfterThrowing：异常后通知，此注解的通知方法发生异常后被执行
      */
     // pt() 方法，主要目的是作为一个命名的切点引用，通过 @Pointcut 注解将一个切点表达式赋予给这个方法名 pt
     // 切点表达式：execution(* org.study.je20250428springaopdemo.controller.*.*(..))
