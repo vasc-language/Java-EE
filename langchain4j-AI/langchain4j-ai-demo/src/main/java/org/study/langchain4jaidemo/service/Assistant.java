@@ -1,6 +1,7 @@
 package org.study.langchain4jaidemo.service;
 
 import dev.langchain4j.service.spring.AiService;
+import reactor.core.publisher.Flux;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,4 +13,7 @@ import dev.langchain4j.service.spring.AiService;
 
 public interface Assistant {
     String chat(String userMessage);
+
+    // 流式输出
+    Flux<String> chatFlux(String userMessage);
 }

@@ -55,6 +55,11 @@
             <artifactId>langchain4j</artifactId>
             <version>1.0.0-beta3</version>
         </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-reactor</artifactId>
+            <version>0.35.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -62,7 +67,12 @@
             <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
-
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.22</version>
+        </dependency>
     </dependencies>
 
     <build>

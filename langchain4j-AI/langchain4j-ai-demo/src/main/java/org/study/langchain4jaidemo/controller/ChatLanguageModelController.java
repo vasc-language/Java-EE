@@ -1,10 +1,10 @@
 package org.study.langchain4jaidemo.controller;
 
-import dev.langchain4j.data.message.AiMessage;
+
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.output.Response;
+
 import java.util.List;
 import java.util.ArrayList;
 import jakarta.annotation.Resource;
@@ -26,27 +26,20 @@ import org.study.langchain4jaidemo.service.Assistant;
 @RequestMapping("/ChatLanguageModelController")
 @RestController
 public class ChatLanguageModelController {
-    @Resource
+    @Resource(name = "chatLanguageModel")
     private ChatLanguageModel chatLanguageModel;
     @Resource
     private Assistant assistant;
 
+
+    // 第一个AI 启动程序 调用 deepseek-chat
     @GetMapping("/hello")
     public String hello(@RequestParam(value = "userMessage", defaultValue = "你是谁？") String userMessage) {
         String result = chatLanguageModel.chat(userMessage);
-
         System.out.println("通过LangChain4j 调用 deepseek-chat 模型返回结果：" + result);
-
         return result;
     }
 
-//    @GetMapping("/lowApi")
-//    public String lowApi(@RequestParam("userMessage") String userMessage) {
-//        List<ChatMessage> messages = new ArrayList<>();
-//        messages.add(UserMessage.from(userMessage));
-//        Response<AiMessage> aiMessageResponse = chatLanguageModel.generate(messages);
-//        return aiMessageResponse.content().text();
-//    }
     @GetMapping("/lowApi")
     public String lowApi(@RequestParam("userMessage") String userMessage) {
         List<ChatMessage> messages = new ArrayList<>();

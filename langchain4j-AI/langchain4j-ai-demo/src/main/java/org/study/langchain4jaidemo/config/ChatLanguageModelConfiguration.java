@@ -1,11 +1,17 @@
 package org.study.langchain4jaidemo.config;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.service.AiServices;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.study.langchain4jaidemo.listener.TestChatModelListener;
 import org.study.langchain4jaidemo.service.Assistant;
+
+import java.time.Duration;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,4 +38,46 @@ public class ChatLanguageModelConfiguration {
         // return (Assistant) assistant.chat("Hello");
         // System.out.println(answer); // Hello, how can I help you?
     }
+
+    @Bean
+    public ChatLanguageModel chatLanguageModel2() {
+        // 专门进行监听测试
+        return OpenAiChatModel.builder()
+                .apiKey(System.getenv("LANGCHAIN4J_KEY"))
+                .modelName("qwen-turbo")
+                .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .logRequests(true) // 日志级别设置为 debug 才有效
+                .logResponses(true) // 日志级别设置为 debug 才有效
+                .listeners(List.of(new TestChatModelListener())) // 手动实现的监听器
+                .maxRetries(2) // 重试机制
+                .timeout(Duration.ofSeconds(10)) // 设置超时时间为 10s
+                .build();
+    }
+
+    @Bean
+    public ChatLanguageModel chatLanguageModel3() {
+        return OpenAiChatModel
+                .builder()
+                .apiKey(System.getenv("LANGCHAIN4J_KEY"))
+                .modelName("qwen2.5-vl-72b-instruct")
+                .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .build();
+    }
+
+    @Bean
+    public StreamingChatLanguageModel streamingChatLanguageModel() {
+        return OpenAiStreamingChatModel.builder()
+                .apiKey(System.getenv("LANGCHAIN4J_KEY"))
+                .modelName("qwen-turbo")
+                .timeout(Duration.ofSeconds(10)) // 超时时间设置为 10s
+                .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .build();
+    }
+
+    // 高阶API 时使用 AiServices
+    @Bean
+    public Assistant chatAssistant(StreamingChatLanguageModel streamingChatLanguageModel) {
+        return AiServices.create(Assistant.class, streamingChatLanguageModel);
+    }
+
 }
