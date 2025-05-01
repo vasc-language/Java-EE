@@ -35,4 +35,6 @@ public class Demo1 {
         // 看 i 是否遍历完popped 数组，证明推进 push 和弹出 pop 操作序列正确
         return i == n;
     }
+
+
 }
