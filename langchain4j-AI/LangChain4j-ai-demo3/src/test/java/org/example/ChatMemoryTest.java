@@ -8,6 +8,7 @@ import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.service.AiServices;
 import org.example.assistant.Assistant;
 import org.example.assistant.MemoryChatAssistant;
+import org.example.assistant.SeparateChatAssistant;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -92,4 +93,20 @@ public class ChatMemoryTest {
         String answer2 = memoryChatAssistant.chat("你知道我是谁吗~");
         System.out.println(answer2);
     }
+
+    /**
+     * 创建隔离对话聊天智能体
+     */
+    @Autowired
+    private SeparateChatAssistant separateChatAssistant;
+    @Test
+    void testChatMemory5() {
+        String answer1 = separateChatAssistant.chat(1, "我是Join2049");
+        System.out.println(answer1);
+        String answer2 = separateChatAssistant.chat(1, "我是谁？");
+        System.out.println(answer2);
+        String answer3 = separateChatAssistant.chat(2, "我是谁？");
+        System.out.println(answer3);
+    }
+
 }
