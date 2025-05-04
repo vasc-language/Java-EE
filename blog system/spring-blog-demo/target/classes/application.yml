@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-blog-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/java_blog_spring?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 212409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true # \u9A7C\u5CF0\u81EA\u52A8\u8F6C\u6362
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# \u8BBE\u7F6E\u65E5\u5FD7\u6587\u4EF6\u7684\u6587\u4EF6\u540D
+logging:
+  file:
+    name: spring-blog.log

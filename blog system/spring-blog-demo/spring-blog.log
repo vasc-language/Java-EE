@@ -1,0 +1,57 @@
+2025-05-04T21:25:47.049+08:00  INFO 23504 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Starting SpringBlogDemoApplication using Java 17 with PID 23504 (D:\Github\Java-EE\blog system\spring-blog-demo\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo)
+2025-05-04T21:25:47.051+08:00  INFO 23504 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T21:25:47.412+08:00  WARN 23504 --- [spring-blog-demo] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.springblogdemo]' package. Please check your configuration.
+2025-05-04T21:25:47.666+08:00  INFO 23504 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-04T21:25:47.668+08:00  INFO 23504 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-04T21:25:47.683+08:00  INFO 23504 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-04T21:25:47.690+08:00  INFO 23504 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-04T21:25:47.690+08:00  INFO 23504 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-04T21:25:47.716+08:00  INFO 23504 --- [spring-blog-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-04T21:25:47.717+08:00  INFO 23504 --- [spring-blog-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 642 ms
+2025-05-04T21:25:48.029+08:00  INFO 23504 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T21:25:48.035+08:00  INFO 23504 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Started SpringBlogDemoApplication in 1.287 seconds (process running for 1.919)
+2025-05-04T21:27:30.224+08:00  INFO 23504 --- [spring-blog-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-04T21:27:30.342+08:00  INFO 23504 --- [spring-blog-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-04T21:27:33.128+08:00  INFO 3924 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Starting SpringBlogDemoApplication using Java 17 with PID 3924 (D:\Github\Java-EE\blog system\spring-blog-demo\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo)
+2025-05-04T21:27:33.130+08:00  INFO 3924 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T21:27:33.468+08:00  WARN 3924 --- [spring-blog-demo] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.springblogdemo]' package. Please check your configuration.
+2025-05-04T21:27:33.678+08:00  INFO 3924 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-04T21:27:33.679+08:00  INFO 3924 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-04T21:27:33.682+08:00  INFO 3924 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-04T21:27:33.690+08:00  INFO 3924 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-04T21:27:33.691+08:00  INFO 3924 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-04T21:27:33.723+08:00  INFO 3924 --- [spring-blog-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-04T21:27:33.723+08:00  INFO 3924 --- [spring-blog-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2025-05-04T21:27:34.069+08:00  INFO 3924 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T21:27:34.074+08:00  INFO 3924 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Started SpringBlogDemoApplication in 1.223 seconds (process running for 1.51)
+2025-05-04T21:30:30.174+08:00  INFO 3924 --- [spring-blog-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04T21:30:30.175+08:00  INFO 3924 --- [spring-blog-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-04T21:30:30.176+08:00  INFO 3924 --- [spring-blog-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-04T22:32:53.017+08:00  INFO 3924 --- [spring-blog-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-04T22:32:53.109+08:00  INFO 3924 --- [spring-blog-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-04T22:32:56.851+08:00  INFO 23664 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Starting SpringBlogDemoApplication using Java 17 with PID 23664 (D:\Github\Java-EE\blog system\spring-blog-demo\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo)
+2025-05-04T22:32:56.853+08:00  INFO 23664 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T22:32:57.176+08:00  WARN 23664 --- [spring-blog-demo] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.springblogdemo]' package. Please check your configuration.
+2025-05-04T22:32:57.357+08:00  INFO 23664 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-04T22:32:57.359+08:00  INFO 23664 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-04T22:32:57.362+08:00  INFO 23664 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-04T22:32:57.370+08:00  INFO 23664 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-04T22:32:57.370+08:00  INFO 23664 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-04T22:32:57.399+08:00  INFO 23664 --- [spring-blog-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-04T22:32:57.400+08:00  INFO 23664 --- [spring-blog-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 523 ms
+2025-05-04T22:32:57.685+08:00  INFO 23664 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T22:32:57.690+08:00  INFO 23664 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Started SpringBlogDemoApplication in 1.116 seconds (process running for 1.426)
+2025-05-04T22:33:00.964+08:00  INFO 23664 --- [spring-blog-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-04T22:33:01.051+08:00  INFO 23664 --- [spring-blog-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-04T22:34:44.328+08:00  INFO 2956 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Starting SpringBlogDemoApplication using Java 17 with PID 2956 (D:\Github\Java-EE\blog system\spring-blog-demo\target\classes started by Ҧ���� in D:\Github\Java-EE\blog system\spring-blog-demo)
+2025-05-04T22:34:44.330+08:00  INFO 2956 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T22:34:44.808+08:00  WARN 2956 --- [spring-blog-demo] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.springblogdemo]' package. Please check your configuration.
+2025-05-04T22:34:45.026+08:00  INFO 2956 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-04T22:34:45.029+08:00  INFO 2956 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-04T22:34:45.044+08:00  INFO 2956 --- [spring-blog-demo] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-04T22:34:45.054+08:00  INFO 2956 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-04T22:34:45.055+08:00  INFO 2956 --- [spring-blog-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-04T22:34:45.094+08:00  INFO 2956 --- [spring-blog-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-04T22:34:45.095+08:00  INFO 2956 --- [spring-blog-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 730 ms
+2025-05-04T22:34:45.501+08:00  INFO 2956 --- [spring-blog-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T22:34:45.507+08:00  INFO 2956 --- [spring-blog-demo] [main] o.e.s.SpringBlogDemoApplication          : Started SpringBlogDemoApplication in 1.502 seconds (process running for 1.894)

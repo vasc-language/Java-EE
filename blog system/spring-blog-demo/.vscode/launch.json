@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBlogDemoApplication<spring-blog-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.example.springblogdemo.SpringBlogDemoApplication",
+            "projectName": "spring-blog-demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
