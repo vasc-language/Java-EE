@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
  * Time: 17:07
  */
 @Tag(name = "xiaozhiAgent")
-@RequestMapping("/agent")
+@RequestMapping("/xiaozhi")
 @RestController
 public class XiaozhiController {
     @Autowired
