@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 数据库实体类
  * User: 姚东名
  * Date: 2025-05-04
  * Time: 21:34
