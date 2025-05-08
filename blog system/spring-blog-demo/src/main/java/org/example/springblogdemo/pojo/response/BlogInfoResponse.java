@@ -1,5 +1,6 @@
 package org.example.springblogdemo.pojo.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -17,5 +18,6 @@ public class BlogInfoResponse {
     private Integer id;
     private String title;
     private String content;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createTime;
 }

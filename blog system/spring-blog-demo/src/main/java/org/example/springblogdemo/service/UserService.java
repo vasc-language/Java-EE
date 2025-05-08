@@ -1,5 +1,8 @@
 package org.example.springblogdemo.service;
 
+import org.example.springblogdemo.pojo.request.UserLoginRequest;
+import org.example.springblogdemo.pojo.response.UserLoginResponse;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -8,4 +11,6 @@ package org.example.springblogdemo.service;
  * Time: 10:38
  */
 public interface UserService {
+    UserLoginResponse checkPassword(UserLoginRequest userLoginRequest);
+
 }

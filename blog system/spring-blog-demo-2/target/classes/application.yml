@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-blog-demo-2
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/java_blog_spring?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 212409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true #
+logging:
+  file:
+    name: spring-blog.log
+

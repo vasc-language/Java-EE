@@ -40,10 +40,10 @@
         </div>
         <div class="right">
             <div class="content">
-                <div class="title">我的第一篇博客</div>
-                <div class="date">2021-06-02</div>
+                <div class="title"></div>
+                <div class="date"></div>
                 <div class="detail">
-                    <p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
+                    <!--<p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
                         laborum numquam aliquam? Ipsam aliquam dolorem officiis! Magni pariatur officiis iusto? Et unde
                         quo fuga, minus deserunt architecto eligendi.</p>
                     <p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
@@ -51,7 +51,7 @@
                         quo fuga, minus deserunt architecto eligendi.</p>
                     <p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
                         laborum numquam aliquam? Ipsam aliquam dolorem officiis! Magni pariatur officiis iusto? Et unde
-                        quo fuga, minus deserunt architecto eligendi.</p>
+                        quo fuga, minus deserunt architecto eligendi.</p>-->
                 </div>
                 <div class="operating">
                     <button onclick="window.location.href='blog_update.html'">编辑</button>
@@ -70,6 +70,24 @@
     <script src="blog-editormd/editormd.js"></script>
     <script src="js/common.js"></script>
     <script>
+        getBlogDetail();
+        function getBlogDetail() {
+            $.ajax({
+                type: "get",
+                url: "/blog/getBlogDetail" + location.search,
+                success: function (result) {
+                    if (result.code == "FAIL") {
+                        alert(result.errMsg);
+                        return;
+                    }
+                    if (result.code == "SUCCESS" && result.data != null) {
+                        $(".content.title").text(result.data.title);
+                        $(".content.date").text(result.data.createTime);
+                        $(".content.detail").text(result.data.content);
+                    }
+                }
+            });
+        }
         
         //显示博客作者信息
         //var userUrl = "/user/getAuthorInfo" + location.search;

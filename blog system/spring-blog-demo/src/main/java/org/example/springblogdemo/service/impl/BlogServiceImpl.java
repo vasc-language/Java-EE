@@ -6,7 +6,7 @@ import org.example.springblogdemo.mapper.BlogInfoMapper;
 import org.example.springblogdemo.pojo.dataobject.BlogInfo;
 import org.example.springblogdemo.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo.service.BlogService;
-import org.springframework.beans.BeanUtils;
+import org.example.springblogdemo.util.BeanTransUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,12 +42,30 @@ public class BlogServiceImpl implements BlogService {
          *   - BeanUtils.copyProperties 是 Spring 提供的的工具方法，会自动匹配同名属性值并复制值
          *   - 这种方法有效分离数据库实体类和 API 响应对象，保护敏感并按照前端需求格式化数据
          */
-        List<BlogInfoResponse> blogInfoResponses = blogInfos.stream().map(blogInfo -> {
+        /*List<BlogInfoResponse> blogInfoResponses = blogInfos.stream().map(blogInfo -> {
             BlogInfoResponse response = new BlogInfoResponse();
             BeanUtils.copyProperties(blogInfo, response); // Object source, Object target
             return response;
-        }).collect(Collectors.toList());
+        }).collect(Collectors.toList());*/
 
+        /**
+         * 将重复的部分封装成 BeanTransUtils 对象
+         */
+        List<BlogInfoResponse> blogInfoResponses = blogInfos
+                .stream()
+                .map(blogInfo -> BeanTransUtils.trans(blogInfo))
+                .collect(Collectors.toList());
         return blogInfoResponses;
+    }
+
+    @Override
+    public BlogInfoResponse getBlogDetail(Integer blogId) {
+        QueryWrapper<BlogInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().eq(BlogInfo::getDeleteFlag, 0)
+                .eq(BlogInfo::getId, blogId);
+        // select * from blog_info where delete_flag = 0 and blog_id = #{blogId}
+        BlogInfo blogInfo = blogInfoMapper.selectOne(queryWrapper);
+
+        return BeanTransUtils.trans(blogInfo); // 将 blogInfo 进行二次封装
     }
 }

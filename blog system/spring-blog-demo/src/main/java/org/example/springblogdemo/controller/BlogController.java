@@ -1,6 +1,7 @@
 package org.example.springblogdemo.controller;
 
 import jakarta.annotation.Resource;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.example.springblogdemo.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo.service.BlogService;
@@ -37,5 +38,16 @@ public class BlogController {
         log.info("获取博客列表~");
         List<BlogInfoResponse> blogInfos = blogService.getList();
         return blogInfos;
+    }
+
+    /**
+     * 获取博客详情
+     * @param blogId
+     * @return
+     */
+    @RequestMapping("/getBlogDetail")
+    public BlogInfoResponse getBlogDetail(@NotNull Integer blogId) {
+        log.info("获取博客详情，blogId:{}", blogId);
+        return blogService.getBlogDetail(blogId);
     }
 }

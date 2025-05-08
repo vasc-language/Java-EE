@@ -14,4 +14,6 @@ import java.util.List;
  */
 public interface BlogService {
     List<BlogInfoResponse> getList();
+
+    BlogInfoResponse getBlogDetail(Integer blogId);
 }

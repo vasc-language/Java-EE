@@ -1,0 +1,140 @@
+2025-05-08T21:15:31.923+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 18956 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T21:15:31.925+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T21:15:32.256+08:00  WARN 18956 --- [spring-blog-demo-2] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.springblogdemo2]' package. Please check your configuration.
+2025-05-08T21:15:32.454+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T21:15:32.455+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T21:15:32.458+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T21:15:32.466+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T21:15:32.466+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T21:15:32.495+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T21:15:32.496+08:00  INFO 18956 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2025-05-08T21:15:32.770+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T21:15:32.776+08:00  INFO 18956 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 1.121 seconds (process running for 1.501)
+2025-05-08T21:15:38.288+08:00  INFO 18956 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T21:15:38.369+08:00  INFO 18956 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T22:00:53.823+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 9620 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T22:00:53.825+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T22:00:54.402+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T22:00:54.404+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T22:00:54.422+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T22:00:54.430+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T22:00:54.430+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T22:00:54.458+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T22:00:54.458+08:00  INFO 9620 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 609 ms
+2025-05-08T22:00:54.862+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T22:00:54.868+08:00  INFO 9620 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 1.352 seconds (process running for 1.713)
+2025-05-08T22:01:02.102+08:00  INFO 9620 --- [spring-blog-demo-2] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T22:01:02.102+08:00  INFO 9620 --- [spring-blog-demo-2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T22:01:02.103+08:00  INFO 9620 --- [spring-blog-demo-2] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T22:01:44.316+08:00  INFO 9620 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T22:01:44.406+08:00  INFO 9620 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T22:01:46.608+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 11952 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T22:01:46.609+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T22:01:47.105+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T22:01:47.107+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T22:01:47.109+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T22:01:47.115+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T22:01:47.115+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T22:01:47.141+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T22:01:47.141+08:00  INFO 11952 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
+2025-05-08T22:01:47.495+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T22:01:47.501+08:00  INFO 11952 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 1.137 seconds (process running for 1.412)
+2025-05-08T22:01:52.619+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T22:01:52.619+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T22:01:52.620+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T22:01:52.634+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] o.e.s.controller.BlogController          : 获取博客列表~
+2025-05-08T22:01:52.689+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T22:01:52.793+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aa035de
+2025-05-08T22:01:52.794+08:00  INFO 11952 --- [spring-blog-demo-2] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T22:31:03.906+08:00  INFO 11952 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T22:31:03.997+08:00  INFO 11952 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T22:31:04.002+08:00  INFO 11952 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T22:31:04.013+08:00  INFO 11952 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T22:31:06.562+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 19860 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T22:31:06.564+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T22:31:07.074+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T22:31:07.075+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T22:31:07.078+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T22:31:07.085+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T22:31:07.085+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T22:31:07.110+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T22:31:07.111+08:00  INFO 19860 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 523 ms
+2025-05-08T22:31:07.480+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T22:31:07.485+08:00  INFO 19860 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 1.196 seconds (process running for 1.51)
+2025-05-08T22:31:20.257+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T22:31:20.257+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T22:31:20.258+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T22:31:20.274+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.e.s.controller.BlogController          : 获取博客列表~
+2025-05-08T22:31:20.317+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T22:31:20.406+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ea08fc4
+2025-05-08T22:31:20.407+08:00  INFO 19860 --- [spring-blog-demo-2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T22:39:42.149+08:00  INFO 19860 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T22:39:42.241+08:00  INFO 19860 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T22:39:42.244+08:00  INFO 19860 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T22:39:42.251+08:00  INFO 19860 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T22:39:45.220+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 11544 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T22:39:45.221+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T22:39:45.756+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T22:39:45.757+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T22:39:45.760+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T22:39:45.768+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T22:39:45.768+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T22:39:45.796+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T22:39:45.796+08:00  INFO 11544 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 553 ms
+2025-05-08T22:39:46.187+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T22:39:46.193+08:00  INFO 11544 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 1.242 seconds (process running for 1.559)
+2025-05-08T22:40:16.529+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T22:40:16.530+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T22:40:16.531+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T22:40:16.705+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-7] o.e.s.controller.BlogController          : 获取博客列表~
+2025-05-08T22:40:16.815+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T22:40:17.038+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-7] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f997680
+2025-05-08T22:40:17.042+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T22:40:20.260+08:00  INFO 11544 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.e.s.controller.BlogController          : 获取博客列表~
+2025-05-08T23:01:56.997+08:00  INFO 11544 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T23:01:57.157+08:00  INFO 11544 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T23:01:57.161+08:00  INFO 11544 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T23:01:57.174+08:00  INFO 11544 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T23:02:04.042+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 6188 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T23:02:04.047+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T23:02:04.995+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T23:02:04.997+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T23:02:05.003+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T23:02:05.016+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T23:02:05.016+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T23:02:05.047+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T23:02:05.047+08:00  INFO 6188 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 941 ms
+2025-05-08T23:02:05.776+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T23:02:05.783+08:00  INFO 6188 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 2.344 seconds (process running for 3.188)
+2025-05-08T23:03:05.212+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T23:03:05.213+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T23:03:05.215+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T23:03:05.274+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.e.s.controller.BlogController          : 获取博客详情，blogId: null
+2025-05-08T23:03:05.447+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T23:03:05.781+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5faf0ebc
+2025-05-08T23:03:05.786+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T23:03:41.915+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-3] o.e.s.controller.BlogController          : 获取博客详情，blogId: 1
+2025-05-08T23:03:49.766+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-7] o.e.s.controller.BlogController          : 获取博客详情，blogId: null
+2025-05-08T23:07:07.763+08:00  INFO 6188 --- [spring-blog-demo-2] [http-nio-8080-exec-6] o.e.s.controller.BlogController          : 获取博客详情，blogId: null
+2025-05-08T23:12:28.567+08:00  INFO 6188 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T23:12:28.854+08:00  INFO 6188 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T23:12:28.861+08:00  INFO 6188 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T23:12:28.879+08:00  INFO 6188 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T23:12:33.726+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Starting SpringBlogDemo2Application using Java 17 with PID 17420 (D:\Github\Java-EE\blog system\spring-blog-demo-2\target\classes started by 姚东名 in D:\Github\Java-EE\blog system\spring-blog-demo-2)
+2025-05-08T23:12:33.729+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T23:12:34.579+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-08T23:12:34.581+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-08T23:12:34.584+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-08T23:12:34.599+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T23:12:34.599+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T23:12:34.655+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T23:12:34.656+08:00  INFO 17420 --- [spring-blog-demo-2] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 881 ms
+2025-05-08T23:12:35.297+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-08T23:12:35.304+08:00  INFO 17420 --- [spring-blog-demo-2] [main] o.e.s.SpringBlogDemo2Application         : Started SpringBlogDemo2Application in 2.148 seconds (process running for 2.795)
+2025-05-08T23:12:38.950+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T23:12:38.951+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T23:12:38.954+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-08T23:12:39.000+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] o.e.s.controller.BlogController          : 获取博客详情，blogId: null
+2025-05-08T23:12:39.106+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T23:12:39.299+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5faf0ebc
+2025-05-08T23:12:39.301+08:00  INFO 17420 --- [spring-blog-demo-2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
