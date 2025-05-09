@@ -1,4 +1,4 @@
-package org.example.springblogdemo2.util;
+package org.example.springblogdemo2.common.util;
 
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;

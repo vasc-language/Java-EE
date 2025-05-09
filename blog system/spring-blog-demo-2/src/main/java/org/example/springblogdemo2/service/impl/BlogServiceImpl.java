@@ -5,7 +5,7 @@ import org.example.springblogdemo2.mapper.BlogInfoMapper;
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo2.service.BlogService;
-import org.example.springblogdemo2.util.BeanTransUtils;
+import org.example.springblogdemo2.common.util.BeanTransUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

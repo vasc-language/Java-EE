@@ -1,4 +1,4 @@
-package org.example.springblogdemo2.util;
+package org.example.springblogdemo2.common.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +11,7 @@ import java.util.Date;
  * Time: 22:45
  */
 public class DateUtils {
-    public static String DateFormat(Date date) {
+    public static String dateFormat(Date date){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
         return dateFormat.format(date);
     }

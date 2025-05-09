@@ -1,6 +1,7 @@
 package org.example.springblogdemo2.controller;
 
 import jakarta.annotation.Resource;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo2.service.BlogService;
@@ -30,7 +31,7 @@ public class BlogController {
     }
 
     @RequestMapping("/getBlogDetail")
-    public BlogInfoResponse getBlogDetail(Integer blogId) {
+    public BlogInfoResponse getBlogDetail(@NotNull(message = "blogId 不能为空") Integer blogId) {
         log.info("获取博客详情，blogId: {}", blogId);
         return blogService.getBlogDetail(blogId);
     }
