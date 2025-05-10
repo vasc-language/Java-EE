@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: AI-agent
+  ai:
+    dashscope:
+      # 从环境变量中获取API Key，不在项目中存储实际密钥
+      api-key: ${AI_DASHSCOPE_API_KEY}
+      # api-key: sk-b7e784e268444d908cec6c4fb1ae939e
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+# springdoc-openapi
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: org.example.aiagent.controller
+# knife4j
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
