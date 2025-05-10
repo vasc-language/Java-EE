@@ -1,6 +1,7 @@
 package org.example.springblogdemo2.service;
 
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
+import org.example.springblogdemo2.pojo.request.AddBlogRequest;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 
 import java.util.List;
@@ -18,4 +19,6 @@ public interface BlogService {
     BlogInfoResponse getBlogDetail(Integer blogId);
 
     BlogInfo getBlogInfo(Integer blogId);
+
+    boolean addBlog(AddBlogRequest addBlogRequest);
 }

@@ -9,9 +9,17 @@
     color: green;
     margin: 10px;
 }
+
+.right>.blog>.current-time{
+    text-align: center;
+    color: #0066cc;
+    margin: 10px;
+}
+
 .right>.blog>.desc{
     text-indent: 2em;
 }
+
 .right>.blog>.detail{
     display: block;
     width: 100px;

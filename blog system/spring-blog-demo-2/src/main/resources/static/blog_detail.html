@@ -26,7 +26,7 @@
     <div class="left">
         <div class="card">
             <img src="pic/doge.jpg" alt="">
-            <h3>比特汤老师</h3>
+            <h3></h3>
             <a href="#">GitHub 地址</a>
             <div class="row">
                 <span>文章</span>
@@ -42,17 +42,7 @@
         <div class="content">
             <div class="title"></div>
             <div class="date"></div>
-            <div class="detail">
-                <!--<p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
-                    laborum numquam aliquam? Ipsam aliquam dolorem officiis! Magni pariatur officiis iusto? Et unde
-                    quo fuga, minus deserunt architecto eligendi.</p>
-                <p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
-                    laborum numquam aliquam? Ipsam aliquam dolorem officiis! Magni pariatur officiis iusto? Et unde
-                    quo fuga, minus deserunt architecto eligendi.</p>
-                <p>从今天开始, 好好学习~Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque alias
-                    laborum numquam aliquam? Ipsam aliquam dolorem officiis! Magni pariatur officiis iusto? Et unde
-                    quo fuga, minus deserunt architecto eligendi.</p>
--->                </div>
+            <div class="detail" id="detail" style="background: transparent;"></div>
             <div class="operating">
                 <button onclick="window.location.href='blog_update.html'">编辑</button>
                 <button onclick="deleteBlog()">删除</button>
@@ -70,7 +60,12 @@
 <script src="blog-editormd/editormd.js"></script>
 <script src="js/common.js"></script>
 <script>
+    // 博客详情（具体的信息）
     getBlogDetail();
+
+    // 获取作者信息
+    var url = "/user/getAuthorInfo" + location.search;
+    getUserInfo(url);
 
     function getBlogDetail() {
         $.ajax({
@@ -84,7 +79,10 @@
                 if (result.code == "SUCCESS" && result.data != null) {
                     $(".content .title").text(result.data.title);
                     $(".content .date").text(result.data.createTime);
-                    $(".content .detail").text(result.data.content);
+                    editormd.markdownToHTML("detail", {
+                        markdown: result.data.content // 将文本转换为 markdown 格式
+                    });
+                    // $(".content .detail").text(result.data.content);
                 }
             }
         });

@@ -3,8 +3,11 @@ package org.example.springblogdemo2.controller;
 import jakarta.annotation.Resource;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
+import org.example.springblogdemo2.pojo.request.AddBlogRequest;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo2.service.BlogService;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +26,10 @@ public class BlogController {
     @Resource(name = "blogServiceImpl")
     private BlogService blogService;
 
+    /**
+     * 获取博客列表
+     * @return
+     */
     @RequestMapping("/getList")
     public List<BlogInfoResponse> getList() {
         log.info("获取博客列表~");
@@ -30,9 +37,25 @@ public class BlogController {
         return blogInfos;
     }
 
+    /**
+     * 获取博客详情
+     * @param blogId
+     * @return
+     */
     @RequestMapping("/getBlogDetail")
-    public BlogInfoResponse getBlogDetail(@NotNull(message = "blogId 不能为空") Integer blogId) {
+    public BlogInfoResponse getBlogDetail(@NotNull(message = "blogId 不能为 null") Integer blogId) {
         log.info("获取博客详情，blogId: {}", blogId);
         return blogService.getBlogDetail(blogId);
+    }
+
+    /**
+     * 添加博客
+     * @param addBlogRequest
+     * @return
+     */
+    @RequestMapping("/addBlog")
+    public boolean addBlog(@RequestBody @Validated AddBlogRequest addBlogRequest) {
+        log.info("发布博客，userId: {}, title: {}", addBlogRequest.getUserId(), addBlogRequest.getTitle());
+        return blogService.addBlog(addBlogRequest);
     }
 }

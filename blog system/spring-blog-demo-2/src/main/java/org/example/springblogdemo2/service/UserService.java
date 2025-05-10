@@ -1,6 +1,7 @@
 package org.example.springblogdemo2.service;
 
 import org.example.springblogdemo2.pojo.request.UserLoginRequest;
+import org.example.springblogdemo2.pojo.response.UserInfoResponse;
 import org.example.springblogdemo2.pojo.response.UserLoginResponse;
 
 /**
@@ -12,4 +13,8 @@ import org.example.springblogdemo2.pojo.response.UserLoginResponse;
  */
 public interface UserService {
     UserLoginResponse checkPassword(UserLoginRequest userLoginRequest);
+
+    UserInfoResponse getUserInfo(Integer userId);
+
+    UserInfoResponse getAuthorInfo(Integer blogId);
 }

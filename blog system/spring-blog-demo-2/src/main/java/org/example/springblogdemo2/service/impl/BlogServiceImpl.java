@@ -1,11 +1,15 @@
 package org.example.springblogdemo2.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import lombok.extern.slf4j.Slf4j;
+import org.example.springblogdemo2.common.exception.BlogException;
 import org.example.springblogdemo2.mapper.BlogInfoMapper;
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
+import org.example.springblogdemo2.pojo.request.AddBlogRequest;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 import org.example.springblogdemo2.service.BlogService;
 import org.example.springblogdemo2.common.util.BeanTransUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +23,7 @@ import java.util.stream.Collectors;
  * Date: 2025-05-08
  * Time: 21:43
  */
+@Slf4j
 @Service
 public class BlogServiceImpl implements BlogService {
     @Autowired
@@ -38,17 +43,49 @@ public class BlogServiceImpl implements BlogService {
         return responses;
     }
 
+    /**
+     * 获取博客详情
+     * @param blogId
+     * @return
+     */
     @Override
     public BlogInfoResponse getBlogDetail(Integer blogId) {
         return BeanTransUtils.trans(getBlogInfo(blogId));
     }
 
+    /**
+     * 根据 blogId 来获取博客信息（里面包含了作者ID）
+     * @param blogId
+     * @return
+     */
     @Override
     public BlogInfo getBlogInfo(Integer blogId){
         QueryWrapper<BlogInfo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(BlogInfo::getDeleteFlag, 0)
+        queryWrapper.lambda()
+                .eq(BlogInfo::getDeleteFlag, 0)
                 .eq(BlogInfo::getId, blogId);
         return blogInfoMapper.selectOne(queryWrapper);
+    }
+
+    /**
+     * 添加博客
+     * @param addBlogRequest
+     * @return
+     */
+    @Override
+    public boolean addBlog(AddBlogRequest addBlogRequest) {
+        BlogInfo blogInfo = new BlogInfo();
+        BeanUtils.copyProperties(addBlogRequest, blogInfo);
+        try {
+            Integer result = blogInfoMapper.insert(blogInfo); // 插入博客
+            if (result == 1) {
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            log.error("博客插入失败，e: ", e);
+            throw new BlogException("内部错误，请联系管理员");
+        }
     }
 
     /*@Override

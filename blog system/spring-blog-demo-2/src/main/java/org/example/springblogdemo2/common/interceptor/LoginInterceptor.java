@@ -30,25 +30,6 @@ public class LoginInterceptor implements HandlerInterceptor {
      * @return
      * @throws Exception
      */
-    /*@Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String userToken = request.getHeader(Constants.USER_TOKEN_HEADER_KEY);
-        log.info("从header中获取token:" + userToken);
-        if (userToken == null) {
-            // 拦截
-            response.setStatus(401);
-            return false;
-        }
-        // 校验 token 是否合法
-        Claims claims = JwtUtils.parseToken(userToken);
-        if (claims == null) {
-            // 拦截
-            response.setStatus(401);
-            return false;
-        }
-        return true;
-    }
-*/
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String userToken = request.getHeader(Constants.USER_TOKEN_HEADER_KEY);
@@ -90,4 +71,24 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         }
     }
+
+    /*@Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        String userToken = request.getHeader(Constants.USER_TOKEN_HEADER_KEY);
+        log.info("从header中获取token:" + userToken);
+        if (userToken == null) {
+            // 拦截
+            response.setStatus(401);
+            return false;
+        }
+        // 校验 token 是否合法
+        Claims claims = JwtUtils.parseToken(userToken);
+        if (claims == null) {
+            // 拦截
+            response.setStatus(401);
+            return false;
+        }
+        return true;
+    }
+*/
 }
