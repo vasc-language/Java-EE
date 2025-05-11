@@ -5736,3 +5736,7 @@ org.springframework.web.method.annotation.HandlerMethodValidationException: 400 
 2025-05-11T12:24:02.000+08:00  INFO 7012 --- [spring-blog-demo-2] [http-nio-8080-exec-2] o.e.s.c.interceptor.LoginInterceptor     : Token验证成功，用户ID: 2
 2025-05-11T12:24:02.000+08:00  INFO 7012 --- [spring-blog-demo-2] [http-nio-8080-exec-4] o.e.s.controller.BlogController          : 获取博客列表~
 2025-05-11T12:24:02.001+08:00  INFO 7012 --- [spring-blog-demo-2] [http-nio-8080-exec-2] o.e.s.controller.UserController          : 获取用户信息，userId: 2
+2025-05-11T12:31:34.940+08:00  INFO 7012 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T12:31:35.024+08:00  INFO 7012 --- [spring-blog-demo-2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T12:31:35.026+08:00  INFO 7012 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T12:31:35.035+08:00  INFO 7012 --- [spring-blog-demo-2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
