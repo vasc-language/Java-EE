@@ -40,21 +40,56 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script>
+    // 获取URL参数的函数
+    function getUrlParam(name) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(name);
+    }
+    
     function login() {
+        // 清除之前可能存在的token，避免干扰新的登录
+        localStorage.removeItem("userToken");
+        localStorage.removeItem("loginUserId");
+        
+        // 特殊处理登录请求，不使用全局ajaxSend添加的token
+        var loginData = JSON.stringify({
+            userName: $("#username").val(),
+            password: $("#password").val()
+        });
+        
+        console.log("正在提交登录请求...");
+        
         $.ajax({
             type: "post",
             url: "/user/login",
             contentType: "application/json",
-            data: JSON.stringify({
-                userName: $("#username").val(),
-                password: $("#password").val()
-            }),
+            data: loginData,
+            // 添加这个设置，防止全局Ajax拦截器添加token
+            beforeSend: function(xhr) {
+                console.log("登录请求不添加token");
+                // 显式删除header中可能存在的token
+                xhr.setRequestHeader("user_token", "");
+            },
             success: function (result) {
+                console.log("登录响应:", result);
                 if (result != null && result.code == "SUCCESS") {
                     //密码正常
+                    console.log("登录成功，保存用户ID: " + result.data.userId + " 和token");
                     localStorage.setItem("loginUserId", result.data.userId);
-                    localStorage.setItem("userToken", result.data.token)
-                    location.href = "blog_list.html";
+                    localStorage.setItem("userToken", result.data.token);
+                    
+                    // 获取returnUrl参数
+                    const returnUrl = getUrlParam('returnUrl');
+                    
+                    // 如果存在returnUrl参数，则重定向到该URL，否则重定向到blog_list.html
+                    if (returnUrl) {
+                        console.log("重定向到:", decodeURIComponent(returnUrl));
+                        location.href = decodeURIComponent(returnUrl);
+                    } else {
+                        console.log("重定向到博客列表页");
+                        location.href = "blog_list.html";
+                    }
                 } else {
                     if(result == null){
                         alert("服务器响应错误，请稍后重试");
@@ -62,10 +97,12 @@
                         alert(result.errMsg);
                     }
                 }
+            },
+            error: function(xhr, status, error) {
+                console.error("登录请求错误:", status, error);
+                alert("登录请求失败，请检查网络连接或稍后重试");
             }
         });
-        // location.assign("blog_list.html");
-
     }
 </script>
 </body>

@@ -12,7 +12,13 @@
  */
 $(document).ajaxSend(function (event, xhr, options) {
     // 从 localStorage 中拿到 userToken
-    xhr.setRequestHeader("user_token", localStorage.getItem("userToken"));
+    var token = localStorage.getItem("userToken");
+    if (token) {
+        console.log("AJAX请求添加token到请求头：" + options.url);
+        xhr.setRequestHeader("user_token", token);
+    } else {
+        console.log("AJAX请求未找到token：" + options.url);
+    }
 });
 
 /**
@@ -49,7 +55,7 @@ function getUserInfo(url) {
 
 /**
  * 这个函数会清除本地存储的用户ID和令牌，然后将用户重定向到登陆页面
- * 点击“注销”按钮
+ * 点击"注销"按钮
  */
 function logout() {
     // 清除本地存储的用户信息

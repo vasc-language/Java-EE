@@ -4,6 +4,7 @@ import org.example.springblogdemo2.common.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -18,17 +19,22 @@ public class WebConfig implements WebMvcConfigurer {
     @Autowired
     private LoginInterceptor loginInterceptor;
 
-    /*@Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor)
-                .addPathPatterns("/blog/**", "/user/**") // 要拦截的路径
-                .excludePathPatterns("/user/login"); // 排除要拦截的路径
-    }*/
-
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor)
-                .addPathPatterns("/blog/add", "/blog/edit/**", "/user/info/**") // 只拦截需要登录的操作
-                .excludePathPatterns("/user/login");
+                // 先只拦截指定的API路径，避免拦截静态资源和登录接口
+                .addPathPatterns("/blog/**", "/user/**")
+                // 明确排除登录相关的路径
+                .excludePathPatterns(
+                        "/user/login/**",      // 排除所有登录API（任何HTTP方法）
+                        "/blog_login.html"     // 排除登录页面
+                );
+    }
+    
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // 静态资源处理
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/");
     }
 }

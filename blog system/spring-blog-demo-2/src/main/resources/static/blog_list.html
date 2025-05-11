@@ -73,13 +73,24 @@
                         finalHtml += '<div class="date">发布时间: ' + blogInfo.createTime + '</div>';
                         finalHtml += '<div class="current-time">当前时间: ' + blogInfo.currentTime + '</div>';
                         finalHtml += '<div class="desc">' + blogInfo.content + '</div>';
-                        finalHtml += '<a class="detail" href="blog_detail.html?blogId=' + blogInfo.id + '">查看全文&gt;&gt;</a>';
+                        finalHtml += '<a class="detail" href="javascript:void(0)" onclick="viewBlogDetail(' + blogInfo.id + ')">查看全文&gt;&gt;</a>';
                         finalHtml += '</div>'
                     }
                     $(".container .right").html(finalHtml);
                 }
             }
         });
+    }
+
+    function viewBlogDetail(blogId) {
+        // 获取token并添加到URL参数
+        var token = localStorage.getItem("userToken");
+        if (token) {
+            window.location.href = "blog_detail.html?blogId=" + blogId + "&token=" + encodeURIComponent(token);
+        } else {
+            alert("您尚未登录或登录已过期，请重新登录");
+            window.location.href = "blog_login.html";
+        }
     }
 
 </script>

@@ -44,8 +44,8 @@
             <div class="date"></div>
             <div class="detail" id="detail" style="background: transparent;"></div>
             <div class="operating">
-                <button onclick="window.location.href='blog_update.html'">编辑</button>
-                <button onclick="deleteBlog()">删除</button>
+
+
             </div>
         </div>
 
@@ -60,6 +60,24 @@
 <script src="blog-editormd/editormd.js"></script>
 <script src="js/common.js"></script>
 <script>
+    // 在页面加载后立即尝试从URL获取token并保存
+    $(document).ready(function() {
+        // 获取URL中的token参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        
+        // 如果URL中有token，将其保存到localStorage中
+        if (token) {
+            localStorage.setItem("userToken", token);
+            console.log("从URL参数获取并保存token");
+            
+            // 可选：从URL中删除token参数(为了安全)，但保留其他参数
+            urlParams.delete('token');
+            const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+            history.replaceState(null, '', newUrl);
+        }
+    });
+
     // 博客详情（具体的信息）
     getBlogDetail();
 
@@ -82,7 +100,20 @@
                     editormd.markdownToHTML("detail", {
                         markdown: result.data.content // 将文本转换为 markdown 格式
                     });
-                    // $(".content .detail").text(result.data.content);
+
+                    // 判断是否需要显示 编辑/删除 按钮
+                    // 只需要判断登录的用户ID（loginUserId）和作者的 ID（userId）是否一致即可
+                    //判断是否显示编辑/删除按钮
+                    let loginUserId = localStorage.getItem("loginUserId");
+                    if (result.data.userId == loginUserId) {
+                        //当前作者是登录用户, 显示按钮
+                        let blogId = result.data.id;
+                        let finalHtml = '<button onclick="window.location.href=\'blog_update.html?blogId=' + blogId + '\'">编辑</button>';
+                        finalHtml += '<button onclick="deleteBlog(' + blogId + ')">删除</button>';
+                        console.log(finalHtml);
+
+                        $(".right .content .operating").html(finalHtml);
+                    }
                 }
             }
         });
@@ -92,8 +123,20 @@
     //var userUrl = "/user/getAuthorInfo" + location.search;
     //getUserInfo(userUrl);
 
-    function deleteBlog() {
-        alert("删除博客");
+    function deleteBlog(blogId) {
+        $.ajax({
+            type: "post",
+            url: "/blog/delete?blogId=" + blogId,
+            success: function (result) {
+                if (result.code == "SUCCESS" && result.data == true) {
+                    // 删除成功
+                    location.href = "blog_list.html";
+                } else {
+                    // TODO 自行完善
+                    alert(result.errMsg);
+                }
+            }
+        });
     }
 </script>
 </body>

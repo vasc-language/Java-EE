@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.annotation.Resource;
 import org.example.springblogdemo2.common.exception.BlogException;
 import org.example.springblogdemo2.common.util.BeanTransUtils;
+import org.example.springblogdemo2.common.util.SecurityUtils;
 import org.example.springblogdemo2.mapper.UserInfoMapper;
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
 import org.example.springblogdemo2.pojo.dataobject.UserInfo;
@@ -59,9 +60,13 @@ public class UserServiceImpl implements UserService {
             throw new BlogException("用户不存在");
         }
 
-        if (!userLoginRequest.getPassword().equals(userInfo.getPassword())) {
+        // 解密
+        if (!SecurityUtils.verify(userLoginRequest.getPassword(), userInfo.getPassword())) {
             throw new BlogException("用户密码错误");
         }
+        /*if (!userLoginRequest.getPassword().equals(userInfo.getPassword())) {
+            throw new BlogException("用户密码错误");
+        }*/
 
         // 密码正确
         Map<String ,Object> map = new HashMap<>();

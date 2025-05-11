@@ -2,6 +2,7 @@ package org.example.springblogdemo2.service;
 
 import org.example.springblogdemo2.pojo.dataobject.BlogInfo;
 import org.example.springblogdemo2.pojo.request.AddBlogRequest;
+import org.example.springblogdemo2.pojo.request.UpdateRequest;
 import org.example.springblogdemo2.pojo.response.BlogInfoResponse;
 
 import java.util.List;
@@ -21,4 +22,8 @@ public interface BlogService {
     BlogInfo getBlogInfo(Integer blogId);
 
     boolean addBlog(AddBlogRequest addBlogRequest);
+
+    Boolean updateBlog(UpdateRequest updateRequest);
+
+    Boolean deleteBlog(Integer blogId);
 }
