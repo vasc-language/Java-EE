@@ -56,7 +56,7 @@ public class SdkAiInvoke {
      */
     public static void main(String[] args) {
         try {
-            // 注意：在Spring容器外运行时，将无法从配置文件获取API Key
+            // 注意：在 Spring 容器外运行时，将无法从配置文件获取API Key
             // 会尝试从环境变量或默认值获取
             SdkAiInvoke invoke = new SdkAiInvoke();
             GenerationResult result = invoke.callWithMessage();
