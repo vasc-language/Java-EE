@@ -15,5 +15,5 @@
 
 spring:
   profiles:
-    active: dev
+    active: @profile.name@
 
