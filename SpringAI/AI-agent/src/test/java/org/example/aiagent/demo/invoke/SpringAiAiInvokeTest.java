@@ -24,7 +24,10 @@ class SpringAiAiInvokeTest {
 
     @Autowired
     private ChatClient chatClient;
-    
+
+    /**
+     * ChatClient 返回 ChatResponse 对象
+     */
     @Test
     void testChatClientWithChatResponse() {
         // 使用配置类中创建的ChatClient实例
@@ -36,7 +39,11 @@ class SpringAiAiInvokeTest {
         assertNotNull(chatResponse);
         System.out.println("响应内容: " + chatResponse.getResult().getOutput().getText());
     }
-    
+
+    /**
+     * 返回实体对象（自动将 AI 映射为 Java 对象）
+     * 这是单个实体
+     */
     @Test
     void testChatClientWithEntity() {
         // 定义实体记录类
@@ -51,7 +58,10 @@ class SpringAiAiInvokeTest {
         assertNotNull(actorFilms);
         System.out.println("演员: " + actorFilms.actor() + ", 电影: " + actorFilms.movies());
     }
-    
+
+    /**
+     * 返回实体对象：返回泛型集合
+     */
     @Test
     void testChatClientWithEntityList() {
         // 定义实体记录类
@@ -69,7 +79,7 @@ class SpringAiAiInvokeTest {
     }
 
     /**
-     * 流式输出
+     * 流式返回
      */
     @Test
     void testChatClientWithStreamResponse() {
