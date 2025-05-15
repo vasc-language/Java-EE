@@ -22,6 +22,9 @@ import org.springframework.ai.chat.model.MessageAggregator;
 /**
  * 自定义拦截器 Advisor
  * 打印 info 级别日志、只输出单次用户提示词和 AI 回复的文本
+ * 1. 拦截与增强：能够在请求发送前和响应接收后执行特定逻辑
+ * 2. 链式处理：多个 Advisor 按顺序组成处理链，依次处理请求和响应
+ * 3. 上下文传递：允许在处理链中传递请求上下文和参数，实现跨 Advisor 通信
  */
 @Slf4j
 public class MyLoggerAdvisor implements CallAroundAdvisor, StreamAroundAdvisor {

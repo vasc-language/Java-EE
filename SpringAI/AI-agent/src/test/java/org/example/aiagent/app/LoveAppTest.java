@@ -31,4 +31,15 @@ class LoveAppTest {
         String answer2 = loveApp.doChat(message2, chatId);
         Assertions.assertNotNull(answer);
     }
+
+    /**
+     * 测试结构化功能
+     */
+    @Test
+    void doChatWithReport() {
+        String chatId = UUID.randomUUID().toString();
+        String message = "你好，我是 Join2049，但是现在我很烦我女盆友她，因为她太漂亮了";
+        LoveApp.LoveReport answer = loveApp.doChatWithReport(message, chatId);
+        System.out.println(answer);
+    }
 }

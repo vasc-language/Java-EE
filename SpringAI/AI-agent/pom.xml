@@ -97,6 +97,14 @@
             <artifactId>jsonschema-module-jackson</artifactId>
             <version>4.38.0</version>
         </dependency>
+
+        <!--基于内存的持久化存储-->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
