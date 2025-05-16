@@ -38,7 +38,7 @@ class LoveAppTest {
     @Test
     void doChatWithReport() {
         String chatId = UUID.randomUUID().toString();
-        String message = "你好，我是 Join2049，但是现在我很烦我女盆友她，因为她太漂亮了";
+        String message = "你好，我是 Join2049，但是现在我很烦我女盆友她，因为她太漂亮了，怕被别人抢走";
         LoveApp.LoveReport answer = loveApp.doChatWithReport(message, chatId);
         System.out.println(answer);
     }
